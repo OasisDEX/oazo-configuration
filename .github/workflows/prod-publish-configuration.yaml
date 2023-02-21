@@ -1,4 +1,4 @@
-name: Upload staging configuration to Staging AWS S3 bucket
+name: Upload prod configuration to Prod AWS S3 bucket
 
 on:
   push:
