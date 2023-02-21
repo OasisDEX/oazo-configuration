@@ -1,0 +1,23 @@
+name: Upload staging configuration to Staging AWS S3 bucket
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Copy a file to AWS S3 bucket
+      uses: prewk/s3-cp-action@v2
+      with:
+        aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws_region: ${{ vars.AWS_DEFAULT_REGION }}
+        source: ${{ vars.SOURCE_CONFIGURATION_FILE_PATH }}
+        dest: 's3://${{ vars.AWS_BUCKET_NAME }}/${{ vars.DESTINATION_CONFIGURATION_FILE_PATH }}'
+        flags: --acl public-read
