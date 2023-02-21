@@ -21,5 +21,6 @@
    "AaveProtection":false,
    "AaveProtectionWrite":false,
    "Ajna":false,
-   "DaiSavingsRate":true
+   "DaiSavingsRate":true,
+   "StagingDupa":false
 }
