@@ -21,6 +21,5 @@
    "AaveProtection":false,
    "AaveProtectionWrite":false,
    "Ajna":false,
-   "DaiSavingsRate":true,
-   "ProdDupa":false
+   "DaiSavingsRate":true
 }
