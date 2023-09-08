@@ -1,4 +1,4 @@
-import { ConfigHelperType } from "../../types";
+import { ConfigHelperType } from "⌨️";
 
 export default function ({
   isProduction,
