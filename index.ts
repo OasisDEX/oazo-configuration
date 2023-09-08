@@ -1,0 +1,3 @@
+import { generateConfigs } from "🛠️";
+
+generateConfigs();
