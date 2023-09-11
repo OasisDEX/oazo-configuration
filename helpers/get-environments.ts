@@ -1,5 +1,5 @@
+import { ConfigHelperType, Environments } from "⌨️";
 import { constants } from "🛠️";
-import { ConfigHelperType, ConfigModule, Environments } from "⌨️";
 
 export const getEnvironments: Record<Environments, ConfigHelperType> =
   constants.environments.reduce(

@@ -1,13 +1,11 @@
-import { join } from "path";
 import { ConfigModule, Environments } from "⌨️";
 import { constants, getEnvironments } from "🛠️";
+import { join } from "path";
 
 export const parseConfig = async (configModuleFolder: string) => {
-  const tempConfigModule = require(join(
-    constants.configFolder,
-    configModuleFolder,
-    "index.ts"
-  )).default as ConfigModule;
+  const { default: tempConfigModule } = (await import(
+    join(constants.configFolder, configModuleFolder, "index.ts")
+  )) as { default: ConfigModule };
   return {
     [configModuleFolder]: constants.environments.reduce(
       (acc, env) => ({

@@ -1,11 +1,6 @@
 import { ConfigHelperType } from "⌨️";
 
-export default function ({
-  isProduction,
-  isStaging,
-  isDevelopment,
-  notProduction,
-}: ConfigHelperType) {
+export default function ({ isStaging, notProduction }: ConfigHelperType) {
   return {
     TestConfigTestValueAlwaysTrue: true,
     TestConfigTestValueAlwaysFalse: false,

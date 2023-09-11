@@ -13,4 +13,14 @@ export type ConfigHelperType = {
   notDevelopment: boolean;
 };
 
-export type ConfigModule = (args: ConfigHelperType) => Record<string, any>;
+type ConfigModulePiece =
+  | string
+  | number
+  | boolean
+  | null
+  | undefined
+  | { [name: string]: ConfigModulePiece }
+  | ConfigModulePiece[];
+export type ConfigModule = (
+  args: ConfigHelperType
+) => Record<string, ConfigModulePiece>;

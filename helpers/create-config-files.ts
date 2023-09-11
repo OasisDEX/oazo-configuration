@@ -1,5 +1,5 @@
-import { existsSync, mkdirSync, promises } from "fs";
 import { ConfigModule, Environments } from "⌨️";
+import { existsSync, mkdirSync, promises } from "fs";
 
 export const createConfigFiles = async (configs: {
   [configName: string]: Record<Environments, ConfigModule>;

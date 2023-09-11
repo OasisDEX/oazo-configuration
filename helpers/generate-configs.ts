@@ -1,5 +1,5 @@
-import { green, italic, yellow } from "kleur";
 import { createConfigFiles, getConfigMainModules, parseConfig } from "🛠️";
+import { green, italic, yellow } from "kleur";
 
 const generatingTimeStart = Date.now();
 
