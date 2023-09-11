@@ -11,8 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     environment: prod
     steps:
-      - name: Set date env
-        run: echo "::set-env name=NOW::$(date +'%Y-%m-%dT%H-%M-%S')"
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v1
         with:
@@ -25,7 +23,7 @@ jobs:
         run: bun dle
       - uses: actions/upload-artifact@v3
         with:
-          name: oazo-configuration-${{ env.NOW }}
+          name: oazo-configuration-${{ github.sha }}
           path: ${{ vars.SOURCE_CONFIGURATION_FILE_PATH }}
           if-no-files-found: error
       - name: Copy a file to AWS S3 bucket 🪣
