@@ -2,17 +2,11 @@
   "name": "oazo-configuration",
   "version": "1.0.0",
   "description": "",
-  "bin": "./scripts/generate-config.js",
   "scripts": {
     "dle": "rimraf dist; bun ./index.ts",
     "lint": "eslint --ext .ts .",
-    "lint:fix": "eslint --fix --ext .ts .",
-    "dle-publish": "bun dle && npm publish"
+    "lint:fix": "eslint --fix --ext .ts ."
   },
-  "files": [
-    "dist",
-    "./scripts/generate-config.js"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OasisDEX/oazo-configuration.git"
@@ -30,9 +24,6 @@
     "eslint": "^8.1.0",
     "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
     "kleur": "^4.1.5",
-    "rimraf": "^5.0.1",
-    "ts-node": "^10.9.1",
-    "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.2.2"
+    "rimraf": "^5.0.1"
   }
 }
