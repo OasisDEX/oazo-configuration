@@ -40,7 +40,5 @@ export default function ({ isProduction, notProduction }: ConfigHelperType) {
     SparkProtocolBorrow: true,
     SparkProtocolMultiply: true,
     SparkProtocolSDAIETH: false,
-    SomeTestingFeatureIWantToTest: isProduction ? false : true,
-    SomeOtherTestingFeatureIWantToTest: notProduction ? false : true,
   };
 }
