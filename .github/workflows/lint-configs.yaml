@@ -8,11 +8,12 @@ jobs:
   lint:
     name: Lint configuration files
     runs-on: ubuntu-latest
-    environment: prod
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v1
         with:
           bun-version: "1.0.0"
+      - name: Install packages 📦
+        run: bun install
       - name: Lint the config files 🧹
         run: bun lint
