@@ -33,5 +33,5 @@ jobs:
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws_region: ${{ vars.AWS_DEFAULT_REGION }}
           source: ${{ vars.SOURCE_CONFIGURATION_FILE_PATH }}
-          dest: "s3://${{ vars.AWS_BUCKET_NAME }}/${{ vars.DESTINATION_CONFIGURATION_FILE_PATH }}"
+          dest: "s3://${{ vars.AWS_BUCKET_NAME }}/"
           flags: --acl public-read --recursive
