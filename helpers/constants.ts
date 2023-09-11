@@ -8,4 +8,5 @@ export const constants = {
     Environments.staging,
   ],
   configFolder: path.join(__dirname, "../configs"),
+  distFolder: path.join(__dirname, "../dist"),
 };

@@ -1,0 +1,25 @@
+name: Bump package version and tag it
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  bump-and-tag:
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    name: Bump and Tag
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get Tags
+        run: git fetch origin +refs/tags/*:refs/tags/*
+
+      - name: Bump Version
+        id: bump_and_tag
+        uses: konsentus/action.bump-version-and-tag@v2

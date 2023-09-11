@@ -5,6 +5,7 @@
     "removeComments": true,
     "preserveConstEnums": true,
     "sourceMap": true,
+    "esModuleInterop": true,
     "paths": {
       "🛠️": ["./helpers/index.ts"],
       "⌨️": ["./types/index.ts"]
