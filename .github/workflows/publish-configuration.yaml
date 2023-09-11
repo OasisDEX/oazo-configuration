@@ -23,7 +23,7 @@ jobs:
         run: bun dle
       - uses: actions/upload-artifact@v3
         with:
-          name: oazo-configuration
+          name: oazo-configuration-${{ github.event.repository.updated_at}}
           path: ${{ vars.SOURCE_CONFIGURATION_FILE_PATH }}
           if-no-files-found: error
       - name: Copy a file to AWS S3 bucket 🪣

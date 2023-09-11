@@ -1,16 +1,22 @@
 import { createConfigFiles, getConfigMainModules, parseConfig } from "🛠️";
-import { green, italic, yellow } from "kleur";
+import formatting from "kleur";
 
 const generatingTimeStart = Date.now();
 
 export async function generateConfigs() {
-  console.log(`\n${green(italic("Generating Oazo config files 🦾"))}\n`);
+  console.log(
+    `\n${formatting.green(
+      formatting.italic("Generating Oazo config files 🦾")
+    )}\n`
+  );
   const configModulesFolders = await getConfigMainModules();
   console.log(
-    italic(
+    formatting.italic(
       `Found ${
         configModulesFolders.length
-      } config folders: ${configModulesFolders.map(yellow).join(", ")}`
+      } config folders: ${configModulesFolders
+        .map(formatting.yellow)
+        .join(", ")}`
     )
   );
   const configsList = await Promise.all(configModulesFolders.map(parseConfig));
@@ -35,8 +41,8 @@ export async function generateConfigs() {
   console.table(consoleReportData);
 
   console.log(
-    `\n${green("Oazo config files generated! 🫒")} \n${green(
-      `Time: ${Date.now() - generatingTimeStart}ms`
-    )}\n`
+    `\n${formatting.green(
+      "Oazo config files generated! 🫒"
+    )} \n${formatting.green(`Time: ${Date.now() - generatingTimeStart}ms`)}\n`
   );
 }

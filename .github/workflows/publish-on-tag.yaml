@@ -1,0 +1,25 @@
+name: Publish new NPM package version on tag
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: "1.0.0"
+      - name: Install packages 📦
+        run: bun install
+      - name: Lint the config files 🧹
+        run: bun lint
+      - name: Build and publish 📣
+        run: bun dle-publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
