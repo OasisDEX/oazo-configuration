@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "paths": {
+      "🛠️": ["./helpers/index.ts"],
+      "⌨️": ["./types/index.ts"]
+    }
+  },
+  "include": ["**/*.ts"],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"],
+    "paths": {
+      "🛠️": ["./helpers/index.ts"],
+      "⌨️": ["./types/index.ts"]
+    }
+  }
+}
