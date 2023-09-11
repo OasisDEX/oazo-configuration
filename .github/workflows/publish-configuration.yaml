@@ -7,6 +7,7 @@ on:
 
 jobs:
   deploy:
+    name: Bundle, lint and publish
     runs-on: ubuntu-latest
     environment: prod
     steps:
@@ -14,7 +15,7 @@ jobs:
       - uses: oven-sh/setup-bun@v1
         with:
           bun-version: "1.0.0"
-      - name Lint the config files 🧹
+      - name: Lint the config files 🧹
         run: bun lint
       - name: Build the config files 🍞
         run: bun dle
