@@ -7,19 +7,22 @@ on:
 
 jobs:
   bump-and-tag:
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     name: Bump and Tag
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-
-      - name: Get Tags
-        run: git fetch origin +refs/tags/*:refs/tags/*
-
+          ref: ${{ github.ref }}
       - name: Bump Version
-        id: bump_and_tag
-        uses: konsentus/action.bump-version-and-tag@v2
+        id: bump_version
+        uses: phips28/gh-action-bump-version@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          version-type: "minor"
+          tag-prefix: "v"
+      - name: "Declare a new version"
+        env:
+          NEW_TAG: ${{ steps.version-bump.outputs.newTag }}
+        run: echo "new tag $NEW_TAG"
