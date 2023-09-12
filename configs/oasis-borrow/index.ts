@@ -1,6 +1,6 @@
 import { ConfigHelperType } from "⌨️";
 
-export default function ({ isProduction, notProduction }: ConfigHelperType) {
+export default function ({ isDevelopment }: ConfigHelperType) {
   return {
     features: {
       "🌞": false, // or https://summer.fi/harheeharheeharhee to enable.  https://summer.fi/<any vault ID> to disable.
@@ -36,7 +36,7 @@ export default function ({ isProduction, notProduction }: ConfigHelperType) {
       StopLossRead: true,
       StopLossWrite: true,
       TestFeature: false, // used in unit tests
-      UseNetworkSwitcher: true,
+      UseNetworkSwitcher: isDevelopment ? false : true,
       UseNetworkSwitcherArbitrum: false,
       UseNetworkSwitcherForks: false,
       UseNetworkSwitcherOptimism: true,
