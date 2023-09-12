@@ -3,7 +3,6 @@ import { ConfigHelperType } from "⌨️";
 export default function ({ isDevelopment }: ConfigHelperType) {
   return {
     features: {
-      "🌞": false, // or https://summer.fi/harheeharheeharhee to enable.  https://summer.fi/<any vault ID> to disable.
       AaveV3Arbitrum: false,
       AaveV3Borrow: false,
       AaveV3EarncbETHeth: false,
@@ -36,7 +35,7 @@ export default function ({ isDevelopment }: ConfigHelperType) {
       StopLossRead: true,
       StopLossWrite: true,
       TestFeature: false, // used in unit tests
-      UseNetworkSwitcher: isDevelopment ? false : true,
+      UseNetworkSwitcher: true,
       UseNetworkSwitcherArbitrum: false,
       UseNetworkSwitcherForks: false,
       UseNetworkSwitcherOptimism: true,
