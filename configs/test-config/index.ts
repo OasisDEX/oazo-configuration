@@ -8,5 +8,6 @@ export default function ({ isStaging, notProduction }: ConfigHelperType) {
       ? true
       : false,
     TestConfigTestValueTrueOnStaging: isStaging ? true : false,
+    TestValueFromSecret: process.env.TEST_VALUE_FROM_SECRET,
   };
 }
