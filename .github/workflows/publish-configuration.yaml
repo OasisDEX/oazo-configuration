@@ -23,11 +23,6 @@ jobs:
         run: bun dle
         env:
           TEST_VALUE_FROM_SECRET: ${{ secrets.TEST_VALUE_FROM_SECRET }}
-      - uses: actions/upload-artifact@v3
-        with:
-          name: oazo-configuration-${{ github.sha }}
-          path: ${{ vars.SOURCE_CONFIGURATION_FILE_PATH }}
-          if-no-files-found: error
       - name: Copy a file to AWS S3 bucket 🪣
         uses: prewk/s3-cp-action@v2
         with:
