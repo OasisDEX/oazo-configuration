@@ -21,6 +21,8 @@ jobs:
         run: bun lint
       - name: Build the config files 🍞
         run: bun dle
+        env:
+          TEST_VALUE_FROM_SECRET: ${{ secrets.TEST_VALUE_FROM_SECRET }}
       - uses: actions/upload-artifact@v3
         with:
           name: oazo-configuration-${{ github.sha }}
