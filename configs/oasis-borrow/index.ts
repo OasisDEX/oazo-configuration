@@ -3,12 +3,12 @@ import { ConfigHelperType } from "⌨️";
 export default function ({ isDevelopment: _isDevelopment }: ConfigHelperType) {
   return {
     features: {
-      AaveV3ArbitrumBorrow: false,
+      AaveV3ArbitrumBorrow: true,
       AaveV3ArbitrumEarn: false,
       AaveV3EarncbETHeth: false,
       AaveV3EarnrETHeth: false,
       AaveV3History: false,
-      AaveV3OptimismBorrow: false,
+      AaveV3OptimismBorrow: true,
       AaveV3OptimismEarn: false,
       AaveV3Protection: true,
       AaveV3ProtectionWrite: true,
