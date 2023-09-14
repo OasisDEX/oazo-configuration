@@ -3,12 +3,13 @@ import { ConfigHelperType } from "⌨️";
 export default function ({ isDevelopment }: ConfigHelperType) {
   return {
     features: {
-      AaveV3Arbitrum: false,
-      AaveV3Borrow: false,
+      AaveV3ArbitrumBorrow: false,
+      AaveV3ArbitrumEarn: false,
       AaveV3EarncbETHeth: false,
       AaveV3EarnrETHeth: false,
       AaveV3History: false,
-      AaveV3Multiply: false,
+      AaveV3OptimismBorrow: false,
+      AaveV3OptimismEarn: false,
       AaveV3Protection: true,
       AaveV3ProtectionWrite: true,
       AjnaPoolFinder: true,
@@ -26,19 +27,11 @@ export default function ({ isDevelopment }: ConfigHelperType) {
       ReadOnlyBasicBS: false,
       Referrals: true,
       Sillyness: false,
-      SparkProtocol: true,
-      SparkProtocolBorrow: true,
-      SparkProtocolEarn: true,
-      SparkProtocolMultiply: true,
-      SparkProtocolSDAIETH: false,
       StopLossOpenFlow: false,
       StopLossRead: true,
       StopLossWrite: true,
       TestFeature: false, // used in unit tests
-      UseNetworkSwitcher: true,
-      UseNetworkSwitcherArbitrum: false,
       UseNetworkSwitcherForks: false,
-      UseNetworkSwitcherOptimism: true,
       UseNetworkSwitcherTestnets: false,
     },
   };
