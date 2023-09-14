@@ -1,6 +1,6 @@
 import { ConfigHelperType } from "⌨️";
 
-export default function ({ isDevelopment }: ConfigHelperType) {
+export default function ({ isDevelopment: _isDevelopment }: ConfigHelperType) {
   return {
     features: {
       AaveV3ArbitrumBorrow: false,
