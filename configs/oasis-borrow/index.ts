@@ -1,6 +1,6 @@
 import { ConfigHelperType } from "⌨️";
 
-export default function ({ isDevelopment: _isDevelopment }: ConfigHelperType) {
+export default function ({ isDevelopment: _isDevelopment, isStaging }: ConfigHelperType) {
   return {
     features: {
       AaveV3ArbitrumBorrow: true,
@@ -18,7 +18,7 @@ export default function ({ isDevelopment: _isDevelopment }: ConfigHelperType) {
       AjnaSuppressValidation: false,
       AnotherTestFeature: true, // used in unit tests
       ConstantMultipleReadOnly: false,
-      DaiSavingsRate: true,
+      DaiSavingsRate: isStaging ? false : true,
       DisableSidebarScroll: false,
       FollowAAVEVaults: false,
       ProxyCreationDisabled: false,
