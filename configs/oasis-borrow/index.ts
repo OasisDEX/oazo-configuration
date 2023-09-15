@@ -31,7 +31,7 @@ export default function ({ isDevelopment: _isDevelopment }: ConfigHelperType) {
       StopLossRead: true,
       StopLossWrite: true,
       TestFeature: false, // used in unit tests
-      UseNetworkSwitcherForks: false,
+      UseNetworkSwitcherForks: true,
       UseNetworkSwitcherTestnets: false,
     },
   };
