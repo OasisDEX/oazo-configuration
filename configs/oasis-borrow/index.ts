@@ -18,7 +18,7 @@ export default function ({ isDevelopment: _isDevelopment, isStaging }: ConfigHel
       AjnaSuppressValidation: false,
       AnotherTestFeature: true, // used in unit tests
       ConstantMultipleReadOnly: false,
-      DaiSavingsRate: isStaging ? false : true,
+      DaiSavingsRate: true,
       DisableSidebarScroll: false,
       FollowAAVEVaults: false,
       ProxyCreationDisabled: false,
