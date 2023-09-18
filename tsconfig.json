@@ -6,6 +6,7 @@
     "preserveConstEnums": true,
     "sourceMap": true,
     "esModuleInterop": true,
+    "types": ["bun-types"],
     "paths": {
       "🛠️": ["./helpers/index.ts"],
       "⌨️": ["./types/index.ts"]
