@@ -24,7 +24,8 @@ serve({
       const fileData = file(`./dist/${path}`);
       return new Response(fileData);
     } catch (error) {
-      console.log();
+      console.error(error);
+      return new Response("File not found", { status: 404 });
     }
   },
 });
