@@ -1,6 +1,6 @@
 import { ConfigHelperType } from "⌨️";
 
-export default function ({ isDevelopment: _isDevelopment }: ConfigHelperType) {
+export default function ({ isDevelopment: _isDevelopment, notProduction }: ConfigHelperType) {
   return {
     features: {
       AaveV3ArbitrumBorrow: true,
@@ -40,6 +40,11 @@ export default function ({ isDevelopment: _isDevelopment }: ConfigHelperType) {
         url: "https://blog.summer.fi/oasis-app-rebrands-to-summer-fi/",
         message: "Oasis.app is now Summer.fi. Read the announcement",
       },
+      aaveLike: {
+        orderInformation: {
+          showFlashloanInformation: notProduction,
+        }
+      }
     },
   };
 }
