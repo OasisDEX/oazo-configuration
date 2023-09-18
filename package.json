@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "dle": "rimraf dist; bun ./index.ts",
+    "watch": "concurrently \"bun --watch ./index.ts;\" \"bun ./scripts/serve.ts\"",
     "lint": "eslint --ext .ts .",
     "lint:fix": "eslint --fix --ext .ts ."
   },
@@ -21,8 +22,11 @@
     "@types/node": "^20.5.9",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
+    "bun": "^1.0.2",
+    "concurrently": "^8.2.1",
     "eslint": "^8.1.0",
     "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
+    "http-server": "^14.1.1",
     "kleur": "^4.1.5",
     "rimraf": "^5.0.1",
     "typescript": "^5.2.2"
