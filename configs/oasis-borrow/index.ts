@@ -34,5 +34,12 @@ export default function ({ isDevelopment: _isDevelopment }: ConfigHelperType) {
       UseNetworkSwitcherForks: false,
       UseNetworkSwitcherTestnets: false,
     },
+    parameters: {
+      topBanner: {
+        name: "rebranding",
+        url: "https://blog.summer.fi/oasis-app-rebrands-to-summer-fi/",
+        message: "Oasis.app is now Summer.fi. Read the announcement",
+      },
+    },
   };
 }
