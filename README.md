@@ -4,7 +4,7 @@ Creates a configuration file for Summer.fi front end (and other) projects. This 
 
 ## Installation and creating a config
 
-This was created with `bun` in mind, but should work with `yarn/npm` as well. To install with `bun` [follow the instructions](https://bun.sh/docs/installation):
+This was created with `bun` ([Installation guide](https://bun.sh/docs/installation)) in mind, but should work with `yarn/npm` as well. To install with `bun` [follow the instructions](https://bun.sh/docs/installation):
 
 ### Install dependencies:
 
