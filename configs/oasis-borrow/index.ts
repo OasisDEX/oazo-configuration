@@ -38,7 +38,7 @@ export default function ({ isDevelopment: _isDevelopment, notProduction }: Confi
       topBanner: {
         name: "rebranding",
         url: "https://blog.summer.fi/oasis-app-rebrands-to-summer-fi/",
-        message: "Oasis.app is now Summer.fi. Read the announcement",
+        message: "Oasis.app is now Summer.fi! Read the announcement",
       },
       aaveLike: {
         orderInformation: {
