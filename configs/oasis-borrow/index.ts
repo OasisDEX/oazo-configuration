@@ -33,6 +33,7 @@ export default function ({ isDevelopment: _isDevelopment, notProduction }: Confi
       TestFeature: false, // used in unit tests
       UseNetworkSwitcherForks: false,
       UseNetworkSwitcherTestnets: false,
+      SparkProtocolStopLoss: true,
     },
     parameters: {
       topBanner: {
@@ -43,8 +44,8 @@ export default function ({ isDevelopment: _isDevelopment, notProduction }: Confi
       aaveLike: {
         orderInformation: {
           showFlashloanInformation: notProduction,
-        }
-      }
+        },
+      },
     },
   };
 }
