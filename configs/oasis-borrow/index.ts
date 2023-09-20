@@ -1,6 +1,10 @@
 import { ConfigHelperType } from "⌨️";
 
-export default function ({ isDevelopment: _isDevelopment, notProduction }: ConfigHelperType) {
+export default function ({
+  isDevelopment: _isDevelopment,
+  notProduction,
+  isStaging,
+}: ConfigHelperType) {
   return {
     features: {
       AaveV3ArbitrumBorrow: true,
@@ -33,6 +37,7 @@ export default function ({ isDevelopment: _isDevelopment, notProduction }: Confi
       TestFeature: false, // used in unit tests
       UseNetworkSwitcherForks: false,
       UseNetworkSwitcherTestnets: false,
+      SparkProtocolStopLoss: isStaging,
     },
     parameters: {
       topBanner: {
@@ -43,8 +48,8 @@ export default function ({ isDevelopment: _isDevelopment, notProduction }: Confi
       aaveLike: {
         orderInformation: {
           showFlashloanInformation: notProduction,
-        }
-      }
+        },
+      },
     },
   };
 }
