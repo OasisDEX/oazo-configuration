@@ -25,6 +25,7 @@ export default function ({
       DaiSavingsRate: true,
       DisableSidebarScroll: false,
       FollowAAVEVaults: false,
+      NewNavigation: false,
       ProxyCreationDisabled: false,
       ProxyReveal: false,
       ReadOnlyAutoTakeProfit: false,
