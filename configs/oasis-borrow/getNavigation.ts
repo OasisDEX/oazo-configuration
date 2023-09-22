@@ -1,4 +1,4 @@
-export const getNavigation = {
+export const getNavigation= () => ({
     protocols: {
         ajna: {
             borrow: {
@@ -121,4 +121,4 @@ export const getNavigation = {
         popular: ['ETH, STETH', 'RETH', 'CBETH', 'DAI'],
         new: ['SDAI', 'GHO', 'TBTC'],
     },
-}
+})

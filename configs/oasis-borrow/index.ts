@@ -11,6 +11,6 @@ export default function ({
   return {
     features: getFeatures({ isStaging }),
     parameters: getParameters({ notProduction }),
-    navigation: getNavigation,
+    navigation: getNavigation(),
   }
 }
