@@ -13,6 +13,6 @@ export default function ({
     features: getFeatures({ isStaging }),
     parameters: getParameters({ notProduction }),
     navigation: getNavigation(),
-    rpcConfig: getRpcConfig(),
+    rpcConfig: getRpcConfig({ notProduction }),
   };
 }
