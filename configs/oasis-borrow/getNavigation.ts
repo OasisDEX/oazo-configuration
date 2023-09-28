@@ -71,7 +71,7 @@ export const getNavigation= () => ({
         },
     },
     tokens: {
-        popular: ['ETH', 'STETH', 'RETH', 'CBETH', 'DAI'],
-        new: ['SDAI', 'GHO', 'TBTC'],
+        popular: ['ETH', 'STETH', 'RETH', 'CBETH', 'DAI', 'WBTC', 'USDC'],
+        new: ['SDAI'],
     },
 })
