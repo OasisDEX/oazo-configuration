@@ -16,5 +16,9 @@ export const getParameters = ({
       collateral: ["DAI", "USDC"],
       strategyTypes: ["short"],
     },
+    adjustDisabledFor: {
+      collateral: ["DAI", "USDC"],
+      strategyTypes: ["short"],
+    },
   },
 });
