@@ -21,7 +21,7 @@ export const getFeatures = ({
   DaiSavingsRate: true,
   DisableSidebarScroll: false,
   FollowAAVEVaults: false,
-  NewNavigation: false,
+  NewNavigation: true,
   ProxyCreationDisabled: false,
   ProxyReveal: false,
   ReadOnlyAutoTakeProfit: false,
