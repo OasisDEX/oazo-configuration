@@ -1,10 +1,10 @@
-export enum Network {
+export enum MainNetworks {
     MAINNET = 'mainnet',
-    GOERLI = 'goerli',
-    HARDHAT = 'hardhat',
     OPTIMISM = 'optimism',
     ARBITRUM = 'arbitrum',
     BASE = 'base',
-    LOCAL = 'local',
-    TENDERLY = 'tenderly',
+}
+
+export enum TestNetworks {
+    GOERLI = 'goerli',
 }
