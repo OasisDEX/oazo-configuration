@@ -1,23 +1,33 @@
 import {TokenSymbols} from "./token-symbols";
 
-interface IToken {
+export interface IToken {
     symbol: TokenSymbols
     precision: number
+    address: string
 }
 
 export class Token implements IToken {
     symbol: TokenSymbols
     precision: number
+    address: string
 
-    constructor(symbol: TokenSymbols, precision: number) {
+    constructor(symbol: TokenSymbols, precision: number, address = '') {
         this.symbol = symbol
         this.precision = precision
+        this.address = address
     }
 
-    toObject(): { symbol: TokenSymbols; precision: number } {
+    setAddress(address: string) {
+        this.address = address
+
+        return this
+    }
+
+    toObject(): { symbol: TokenSymbols; precision: number, address: string } {
         return {
             symbol: this.symbol,
-            precision: this.precision
+            precision: this.precision,
+            address: this.address
         };
     }
 }

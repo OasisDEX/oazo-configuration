@@ -1,7 +1,7 @@
-import {Networks, Token, TokenSymbols, tokens} from "🤝";
+import {IToken, Networks, TokenSymbols, tokens} from "🤝";
 
 type TokenSubset = {
-    [key in TokenSymbols]?: Token;
+    [key in TokenSymbols]?: IToken;
 };
 
 type NetworkTokens = {
@@ -14,14 +14,14 @@ type NetworkTokens = {
  */
 export const getTokensByNetwork = (): NetworkTokens => {
     return {
-        [Networks.MAINNET]: [{[TokenSymbols.USDC]: tokens.USDC}, {[TokenSymbols.DAI]: tokens.DAI}],
-        [Networks.OPTIMISM]: [{[TokenSymbols.USDC]: tokens.USDC}],
-        [Networks.ARBITRUM]: [{[TokenSymbols.USDC]: tokens.USDC}],
-        [Networks.BASE]: [{[TokenSymbols.USDC]: tokens.USDC}],
-        [Networks.POLYGON]: [{[TokenSymbols.USDC]: tokens.USDC}],
-        [Networks.GOERLI]: [{[TokenSymbols.USDC]: tokens.USDC}],
-        [Networks.OPTIMISM_GOERLI]: [{[TokenSymbols.USDC]: tokens.USDC}],
-        [Networks.ARBITRUM_GOERLI]: [{[TokenSymbols.USDC]: tokens.USDC}],
-        [Networks.POLYGON_MUMBAI]: [{[TokenSymbols.USDC]: tokens.USDC}],
+        [Networks.MAINNET]: [{[TokenSymbols.USDC]: tokens.USDC.setAddress('').toObject()}, {[TokenSymbols.DAI]: tokens.DAI.setAddress('').toObject()}],
+        [Networks.OPTIMISM]: [{[TokenSymbols.USDC]: tokens.USDC.setAddress('').toObject()}],
+        [Networks.ARBITRUM]: [{[TokenSymbols.USDC]: tokens.USDC.setAddress('').toObject()}],
+        [Networks.BASE]: [{[TokenSymbols.USDC]: tokens.USDC.setAddress('').toObject()}],
+        [Networks.POLYGON]: [{[TokenSymbols.USDC]: tokens.USDC.setAddress('').toObject()}],
+        [Networks.GOERLI]: [{[TokenSymbols.USDC]: tokens.USDC.setAddress('').toObject()}],
+        [Networks.OPTIMISM_GOERLI]: [{[TokenSymbols.USDC]: tokens.USDC.setAddress('').toObject()}],
+        [Networks.ARBITRUM_GOERLI]: [{[TokenSymbols.USDC]: tokens.USDC.setAddress('').toObject()}],
+        [Networks.POLYGON_MUMBAI]: [{[TokenSymbols.USDC]: tokens.USDC.setAddress('').toObject()}],
     }
 };

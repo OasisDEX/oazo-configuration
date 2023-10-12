@@ -11,5 +11,4 @@ export enum Networks {
     OPTIMISM_GOERLI = 'optimism_goerli',
     ARBITRUM_GOERLI = 'arbitrum_goerli',
     POLYGON_MUMBAI = 'polygon_mumbai',
-
 }

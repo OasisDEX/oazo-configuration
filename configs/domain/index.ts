@@ -1,3 +1,4 @@
+import {getDenominationSymbols} from "./getDenominationSymbols";
 import {getLendingProtocols} from "./getLendingProtocols";
 import {getNetworks} from "./getNetworks";
 import {getTokens} from "./getTokens";
@@ -15,5 +16,6 @@ export default function () {
         tokensByNetwork: getTokensByNetwork(),
         lendingProtocols: getLendingProtocols(),
         networks: getNetworks(),
+        denominationSymbols: getDenominationSymbols()
     };
 }
