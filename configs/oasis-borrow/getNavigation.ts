@@ -1,3 +1,5 @@
+import {TokenSymbols} from "🤝";
+
 export const getNavigation= () => ({
     protocols: {
         ajna: {
@@ -70,7 +72,7 @@ export const getNavigation= () => ({
         },
     },
     tokens: {
-        popular: ['ETH', 'STETH', 'RETH', 'CBETH', 'DAI', 'WBTC', 'USDC'],
-        new: ['SDAI'],
+        popular: [TokenSymbols.ETH, TokenSymbols.STETH, TokenSymbols.RETH, TokenSymbols.CBETH, TokenSymbols.DAI, TokenSymbols.WBTC, TokenSymbols.USDC],
+        new: [TokenSymbols.SDAI],
     },
 })
