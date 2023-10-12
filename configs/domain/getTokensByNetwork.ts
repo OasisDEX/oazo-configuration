@@ -17,3 +17,26 @@ export const getTokens = (): Record<TokenSymbols, Token> => {
 
     return result;
 };
+
+
+// const configObject = {
+//     tokens: {
+//         'USDC': {
+//             symbol: 'USDC',
+//             precision: 6
+//         },
+//         'DAI': {
+//             symbol: 'DAI',
+//             precision: 18
+//         },
+//         'WETH': {
+//             symbol: 'WETH',
+//             precision: 18
+//         }
+//     },
+//     tokensByNetwork: {
+//         mainnet: ['USDC', 'DAI'],
+//         optimism: ['USDC'],
+//         arbitrum: ['WETH']
+//     }
+// }

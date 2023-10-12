@@ -13,6 +13,13 @@ class Token implements IToken {
         this.symbol = symbol
         this.precision = precision
     }
+
+    toObject(): { symbol: TokenSymbols; precision: number } {
+        return {
+            symbol: this.symbol,
+            precision: this.precision
+        };
+    }
 }
 
 const ETH = new Token(TokenSymbols.ETH, 18)
@@ -78,7 +85,7 @@ type AllTokenSymbols = {
     [key in TokenSymbols]: Token;
 };
 
-export const Tokens: AllTokenSymbols = {
+export const tokens: AllTokenSymbols = {
     USDC,
     WETH,
     WBTC,

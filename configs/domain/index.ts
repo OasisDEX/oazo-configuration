@@ -1,4 +1,5 @@
 import {ConfigHelperType} from "⌨️";
+import {getTokens} from "./getTokens";
 // import { getFeatures } from "./getFeatures";
 // import { getNavigation } from "./getNavigation";
 // import { getParameters } from "./getParameters";
@@ -17,7 +18,8 @@ export default function ({
      * Possible extensions could include Products / Product categories / Strategies etc
      */
     return {
-        tokens: null,
+        tokens: getTokens(),
+        tokensByNetwork: getTokensByNetwork(),
         lendingProtocols: null,
         networks: null,
     };
