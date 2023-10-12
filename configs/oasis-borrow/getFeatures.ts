@@ -1,8 +1,4 @@
-import { ConfigHelperType } from "⌨️";
-
-export const getFeatures = ({
-  isStaging,
-}: Pick<ConfigHelperType, "isStaging">) => ({
+export const getFeatures = () => ({
   AaveV3ArbitrumBorrow: true,
   AaveV3ArbitrumEarn: false,
   AaveV3EarncbETHeth: false,
@@ -34,6 +30,6 @@ export const getFeatures = ({
   TestFeature: false, // used in unit tests
   UseNetworkSwitcherForks: false,
   UseNetworkSwitcherTestnets: false,
-  SparkProtocolStopLoss: isStaging,
+  SparkProtocolStopLoss: true,
   UseRpcGateway: false,
 });
