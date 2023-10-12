@@ -3,7 +3,7 @@ import {TokenSymbols} from "./token-symbols";
 export interface IToken {
     symbol: TokenSymbols
     precision: number
-    address: string
+    address?: string
 }
 
 export class Token implements IToken {
@@ -11,7 +11,7 @@ export class Token implements IToken {
     precision: number
     address: string
 
-    constructor(symbol: TokenSymbols, precision: number, address = '') {
+    constructor(symbol: TokenSymbols, precision: number, address?: string) {
         this.symbol = symbol
         this.precision = precision
         this.address = address
@@ -23,11 +23,11 @@ export class Token implements IToken {
         return this
     }
 
-    toObject(): { symbol: TokenSymbols; precision: number, address: string } {
+    toObject(): { symbol: TokenSymbols; precision: number, address?: string } {
         return {
             symbol: this.symbol,
             precision: this.precision,
-            address: this.address
+            address: this.address || undefined
         };
     }
 }
