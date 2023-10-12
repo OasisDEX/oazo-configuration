@@ -1,8 +1,8 @@
-import {getDenominationSymbols} from "./getDenominationSymbols";
-import {getLendingProtocols} from "./getLendingProtocols";
-import {getNetworks} from "./getNetworks";
-import {getTokens} from "./getTokens";
-import {getTokensByNetwork} from "./getTokensByNetwork";
+import {getDenominationSymbols} from "./get-denomination-symbols";
+import {getLendingProtocols} from "./get-lending-protocols";
+import {getNetworks} from "./get-networks";
+import {getTokens} from "./get-tokens";
+import {getTokensByNetwork} from "./get-tokens-by-network";
 
 export default function () {
     /**
