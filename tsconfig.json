@@ -9,7 +9,8 @@
     "types": ["bun-types"],
     "paths": {
       "🛠️": ["./helpers/index.ts"],
-      "⌨️": ["./types/index.ts"]
+      "⌨️": ["./types/index.ts"],
+      "🤝": ["./shared/index.ts"],
     }
   },
   "include": ["**/*.ts"]

@@ -1,16 +1,9 @@
-import {ConfigHelperType} from "⌨️";
+import {getLendingProtocols} from "./getLendingProtocols";
+import {getNetworks} from "./getNetworks";
 import {getTokens} from "./getTokens";
-// import { getFeatures } from "./getFeatures";
-// import { getNavigation } from "./getNavigation";
-// import { getParameters } from "./getParameters";
-// import { getRpcConfig } from "./getRpcConfig";
+import {getTokensByNetwork} from "./getTokensByNetwork";
 
-
-export default function ({
-                             isDevelopment: _isDevelopment,
-                             notProduction,
-                             isStaging,
-                         }: ConfigHelperType) {
+export default function () {
     /**
      * Goal is to capture domain specific configurations that is common
      * across all Summer.fi systems and apps.
@@ -20,7 +13,7 @@ export default function ({
     return {
         tokens: getTokens(),
         tokensByNetwork: getTokensByNetwork(),
-        lendingProtocols: null,
-        networks: null,
+        lendingProtocols: getLendingProtocols(),
+        networks: getNetworks(),
     };
 }

@@ -5,7 +5,7 @@ interface IToken {
     precision: number
 }
 
-class Token implements IToken {
+export class Token implements IToken {
     symbol: TokenSymbols
     precision: number
 
@@ -66,6 +66,7 @@ const RWA006 = new Token(TokenSymbols.RWA006, 18)
 const SDAI = new Token(TokenSymbols.SDAI, 18)
 const TBTC = new Token(TokenSymbols.TBTC, 18)
 const TUSD = new Token(TokenSymbols.TUSD, 18)
+const UNIV2AAVEETH = new Token(TokenSymbols.UNIV2AAVEETH, 18)
 const UNIV2DAIETH = new Token(TokenSymbols.UNIV2DAIETH, 18)
 const UNIV2DAIUSDC = new Token(TokenSymbols.UNIV2DAIUSDC, 18)
 const UNIV2DAIUSDT = new Token(TokenSymbols.UNIV2DAIUSDT, 18)
@@ -73,6 +74,7 @@ const UNIV2ETHUSDT = new Token(TokenSymbols.UNIV2ETHUSDT, 18)
 const UNIV2LINKETH = new Token(TokenSymbols.UNIV2LINKETH, 18)
 const UNIV2UNIETH = new Token(TokenSymbols.UNIV2UNIETH, 18)
 const UNIV2USDCETH = new Token(TokenSymbols.UNIV2USDCETH, 18)
+const UNIV2WBTCDAI = new Token(TokenSymbols.UNIV2WBTCDAI, 18)
 const UNIV2WBTCETH = new Token(TokenSymbols.UNIV2WBTCETH, 18)
 const USDT = new Token(TokenSymbols.USDT, 6)
 const WLD = new Token(TokenSymbols.WLD, 8)
@@ -81,18 +83,18 @@ const YIELDETH = new Token(TokenSymbols.YIELDETH, 18)
 const YFI = new Token(TokenSymbols.YFI, 18)
 const ZRX = new Token(TokenSymbols.ZRX, 18)
 
-type AllTokenSymbols = {
+export type Tokens = {
     [key in TokenSymbols]: Token;
 };
 
-export const tokens: AllTokenSymbols = {
-    USDC,
-    WETH,
-    WBTC,
-    DAI,
+export const tokens: Tokens = {
     ETH,
+    WETH,
     STETH,
     WSTETH,
+    WBTC,
+    USDC,
+    DAI,
     CBETH,
     RETH,
     AAVE,
@@ -130,6 +132,7 @@ export const tokens: AllTokenSymbols = {
     SDAI,
     TBTC,
     TUSD,
+    UNIV2AAVEETH,
     UNIV2DAIETH,
     UNIV2DAIUSDC,
     UNIV2DAIUSDT,
@@ -137,6 +140,7 @@ export const tokens: AllTokenSymbols = {
     UNIV2LINKETH,
     UNIV2UNIETH,
     UNIV2USDCETH,
+    UNIV2WBTCDAI,
     UNIV2WBTCETH,
     USDT,
     WLD,

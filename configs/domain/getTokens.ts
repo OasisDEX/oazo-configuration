@@ -1,5 +1,4 @@
-import {TokenSymbols} from "../../common";
-import {tokens} from "../../common";
+import {TokenSymbols, tokens} from "🤝";
 
 interface Token {
     symbol: TokenSymbols
@@ -7,7 +6,7 @@ interface Token {
 }
 
 export const getTokens = (): Record<TokenSymbols, Token> => {
-    const result: Record<TokenSymbols, Token> = {} as any;
+    const result: Record<TokenSymbols, Token> = {} as unknown as Record<TokenSymbols, Token>;
 
     for (const symbol of Object.keys(tokens) as TokenSymbols[]) {
         if (Object.prototype.hasOwnProperty.call(tokens, symbol) && tokens[symbol].toObject) {
