@@ -10,3 +10,5 @@ export const constants = {
   configFolder: path.join(__dirname, "../configs"),
   distFolder: path.join(__dirname, "../dist"),
 };
+
+
