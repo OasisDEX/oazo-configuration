@@ -1,6 +1,6 @@
-import {DenominationSymbols} from "🤝";
+import {DenominationSymbol} from "🤝";
 import {EnumToObject, enumToObject} from "🛠️";
 
-export const getDenominationSymbols = (): EnumToObject<typeof DenominationSymbols> => {
-    return enumToObject(DenominationSymbols)
+export const getDenominationSymbols = (): EnumToObject<typeof DenominationSymbol> => {
+    return enumToObject(DenominationSymbol)
 };

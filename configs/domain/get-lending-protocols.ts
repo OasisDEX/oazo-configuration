@@ -1,6 +1,8 @@
-import { LendingProtocol, LendingProtocolLabel} from "🤝";
+import { LendingProtocol, LendingProtocolLabel } from "🤝";
 
-export const getLendingProtocols = (): Record<LendingProtocol, LendingProtocolLabel> => {
+type LendingProtocolLabelValueType = typeof LendingProtocolLabel[keyof typeof LendingProtocolLabel];
+
+export const getLendingProtocols = (): Record<LendingProtocol, LendingProtocolLabelValueType> => {
     return {
         [LendingProtocol.AaveV2]: LendingProtocolLabel.aavev2,
         [LendingProtocol.AaveV3]: LendingProtocolLabel.aavev3,

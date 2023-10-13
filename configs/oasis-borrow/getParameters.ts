@@ -1,5 +1,5 @@
 import { ConfigHelperType } from "⌨️";
-import {TokenSymbols} from "🤝";
+import {TokenSymbol} from "🤝";
 
 export const getParameters = ({
   notProduction,
@@ -14,7 +14,7 @@ export const getParameters = ({
       showFlashloanInformation: notProduction,
     },
     closeDisabledFor: {
-      collateral: [TokenSymbols.DAI, TokenSymbols.USDC],
+      collateral: [TokenSymbol.DAI, TokenSymbol.USDC],
       strategyTypes: ["short"],
     },
     adjustDisabledFor: {

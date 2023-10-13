@@ -1,12 +1,12 @@
 import {ADDRESSES, ADDRESS_ZERO, Common, SystemKeys} from '@oasisdex/addresses'
-import {IToken, Networks, TokenSymbols, Tokens, tokens} from "🤝";
+import {IToken, Network, TokenSymbol, Tokens, tokens} from "🤝";
 
 type TokenSubset = {
-    [key in TokenSymbols]?: IToken;
+    [key in TokenSymbol]?: IToken;
 };
 
 type NetworkTokens = {
-    [network in Networks]: TokenSubset[];
+    [network in Network]: TokenSubset[];
 };
 
 /**
@@ -14,32 +14,32 @@ type NetworkTokens = {
  * Can be enhanced to return address enriched tokens for each network
  */
 export const getTokensByNetwork = (): NetworkTokens => {
-    const mainnetCommon = ADDRESSES[Networks.MAINNET][SystemKeys.COMMON]
-    const optimismCommon = ADDRESSES[Networks.OPTIMISM][SystemKeys.COMMON]
-    const arbitrumCommon = ADDRESSES[Networks.ARBITRUM][SystemKeys.COMMON]
+    const mainnetCommon = ADDRESSES[Network.MAINNET][SystemKeys.COMMON]
+    const optimismCommon = ADDRESSES[Network.OPTIMISM][SystemKeys.COMMON]
+    const arbitrumCommon = ADDRESSES[Network.ARBITRUM][SystemKeys.COMMON]
     // const baseCommon = ADDRESSES[Networks.BASE][SystemKeys.COMMON]
     // const polygonCommon = ADDRESSES[Networks.POLYGON][SystemKeys.COMMON]
-    const goerliCommon = ADDRESSES[Networks.GOERLI][SystemKeys.COMMON]
+    const goerliCommon = ADDRESSES[Network.GOERLI][SystemKeys.COMMON]
     // const optimismGoerliCommon = ADDRESSES[Networks.OPTIMISM_GOERLI][SystemKeys.COMMON]
 
     return {
-        [Networks.MAINNET]: [
+        [Network.MAINNET]: [
             ...generateEntries(tokens, mainnetCommon)
         ],
-        [Networks.OPTIMISM]: [
+        [Network.OPTIMISM]: [
             ...generateEntries(tokens, optimismCommon),
         ],
-        [Networks.ARBITRUM]: [
+        [Network.ARBITRUM]: [
             ...generateEntries(tokens, arbitrumCommon),
         ],
-        [Networks.BASE]: [],
-        [Networks.POLYGON]: [],
-        [Networks.GOERLI]: [
+        [Network.BASE]: [],
+        [Network.POLYGON]: [],
+        [Network.GOERLI]: [
             ...generateEntries(tokens, goerliCommon),
         ],
-        [Networks.OPTIMISM_GOERLI]: [],
-        [Networks.ARBITRUM_GOERLI]: [],
-        [Networks.POLYGON_MUMBAI]: [],
+        [Network.OPTIMISM_GOERLI]: [],
+        [Network.ARBITRUM_GOERLI]: [],
+        [Network.POLYGON_MUMBAI]: [],
     }
 };
 
@@ -54,7 +54,7 @@ function generateEntries(tokens: Tokens, networkCommonAddresses: Record<Common, 
         // Also in case there's no overlap between tokenSymbols and networkCommonAddresses ignore the tokenSymbol
         if (address && address !== "" && address !== ADDRESS_ZERO) {
             const tokenObject = {
-                [tokenSymbol]: tokens[tokenSymbol as TokenSymbols].setAddress(address).toObject()
+                [tokenSymbol]: tokens[tokenSymbol as TokenSymbol].setAddress(address).toObject()
             };
             entries.push(tokenObject);
         }

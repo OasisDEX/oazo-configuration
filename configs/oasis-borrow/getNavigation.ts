@@ -1,4 +1,4 @@
-import {TokenSymbols} from "🤝";
+import {TokenSymbol} from "🤝";
 
 export const getNavigation= () => ({
     protocols: {
@@ -72,7 +72,7 @@ export const getNavigation= () => ({
         },
     },
     tokens: {
-        popular: [TokenSymbols.ETH, TokenSymbols.STETH, TokenSymbols.RETH, TokenSymbols.CBETH, TokenSymbols.DAI, TokenSymbols.WBTC, TokenSymbols.USDC],
-        new: [TokenSymbols.SDAI],
+        popular: [TokenSymbol.ETH, TokenSymbol.STETH, TokenSymbol.RETH, TokenSymbol.CBETH, TokenSymbol.DAI, TokenSymbol.WBTC, TokenSymbol.USDC],
+        new: [TokenSymbol.SDAI],
     },
 })
