@@ -45,7 +45,7 @@ export enum TokenSymbol {
     RWA005 = 'RWA005',
     RWA006 = 'RWA006',
     SDAI = 'SDAI',            // Some specific version of DAI
-    TBTC = 'TBTC',            // tBTC (tokenized Bitcoin on Ethereum)
+    TBTC = 'TBTC',            // tBTC (tokenised Bitcoin on Ethereum)
     TUSD = 'TUSD',            // TrueUSD
     UNIV2AAVEETH = 'UNIV2AAVEETH',  // Uniswap V2 AAVE-ETH Liquidity Pool Token
     UNIV2DAIETH = 'UNIV2DAIETH',    // Uniswap V2 DAI-ETH Liquidity Pool Token
@@ -64,7 +64,3 @@ export enum TokenSymbol {
     YFI = 'YFI',              // yearn.finance
     ZRX = 'ZRX',              // 0x
 }
-
-
-
-
