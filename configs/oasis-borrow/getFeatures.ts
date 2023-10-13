@@ -32,4 +32,5 @@ export const getFeatures = () => ({
   UseNetworkSwitcherTestnets: false,
   SparkProtocolStopLoss: true,
   UseRpcGateway: false,
+  BaseNetworkEnabled: false,
 });
