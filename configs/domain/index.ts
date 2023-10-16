@@ -1,6 +1,6 @@
 import {getDenominationSymbols} from "./get-denomination-symbols";
-import {getLendingProtocols} from "./get-lending-protocols";
-import {getNetworks} from "./get-networks";
+import {getLabelByLendingProtocol} from "./get-lending-protocols";
+import {getNetworkNameByNetwork} from "./get-networks";
 import {getTokensByNetwork} from "./get-tokens-by-network";
 import {getTokensByTokenSymbol} from "./get-tokens-by-token-symbol";
 
@@ -12,10 +12,10 @@ export default function () {
      * Possible extensions could include Products / Product categories / Strategies etc
      */
     return {
-        tokens: getTokensByTokenSymbol(),
+        tokensByTokenSymbol: getTokensByTokenSymbol(),
         tokensByNetwork: getTokensByNetwork(),
-        lendingProtocols: getLendingProtocols(),
-        networks: getNetworks(),
+        labelByLendingProtocol: getLabelByLendingProtocol(),
+        networkNameByNetwork: getNetworkNameByNetwork(),
         denominationSymbols: getDenominationSymbols()
     };
 }

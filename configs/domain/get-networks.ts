@@ -1,6 +1,6 @@
 import {EnumToObject, enumToObject} from "🛠️";
 import {Network} from "🤝";
 
-export const getNetworks = (): EnumToObject<typeof Network> => {
+export const getNetworkNameByNetwork = (): EnumToObject<typeof Network> => {
     return enumToObject(Network)
 };
