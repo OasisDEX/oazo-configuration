@@ -2,9 +2,9 @@ import {ADDRESSES, ADDRESS_ZERO, Common, SystemKeys} from '@oasisdex/addresses'
 import {
     IToken,
     Network,
-    tokenByTokenSymbol,
     TokenByTokenSymbol,
-    TokenSymbol
+    TokenSymbol,
+    tokenByTokenSymbol
 } from "🤝";
 
 type TokenSubset = {
