@@ -13,10 +13,12 @@ export const getFeatures = () => ({
   AjnaSafetySwitch: true,
   AjnaSuppressValidation: false,
   AnotherTestFeature: true, // used in unit tests
+  BaseNetworkEnabled: false,
   ConstantMultipleReadOnly: false,
   DaiSavingsRate: true,
   DisableSidebarScroll: false,
   FollowAAVEVaults: false,
+  MorphoBlue: false,
   NewNavigation: true,
   ProxyCreationDisabled: false,
   ProxyReveal: false,
@@ -24,13 +26,12 @@ export const getFeatures = () => ({
   ReadOnlyBasicBS: false,
   Referrals: true,
   Sillyness: false,
+  SparkProtocolStopLoss: true,
   StopLossOpenFlow: false,
   StopLossRead: true,
   StopLossWrite: true,
   TestFeature: false, // used in unit tests
   UseNetworkSwitcherForks: false,
   UseNetworkSwitcherTestnets: false,
-  SparkProtocolStopLoss: true,
   UseRpcGateway: false,
-  BaseNetworkEnabled: false,
 });
