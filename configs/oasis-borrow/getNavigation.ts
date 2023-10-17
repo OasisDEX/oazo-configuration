@@ -53,6 +53,23 @@ export const getNavigation= () => ({
                 url: '/earn/dsr',
             },
         },
+        morphoBlue: {
+            borrow: {
+                description: 'Lorem ipsum dolor sit amet.',
+            },
+            multiply: {
+                description: 'Lorem ipsum dolor sit amet.',
+            },
+            earn: {
+                description: 'Lorem ipsum dolor sit amet.',
+            },
+            extra: {
+                title: 'Promoted product',
+                description:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                url: '/',
+            },
+        },
         spark: {
             borrow: {
                 description: 'Borrow DAI at the best rate, with the highest LTVs. Become eligible for token rewards.',
