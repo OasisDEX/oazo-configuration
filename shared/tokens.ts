@@ -1,7 +1,7 @@
 /**
  * Represents individual tokens with their specific attributes.
  * The `Token` class encapsulates details like token symbol, precision (for decimal representation),
- * and an optional Ethereum address (if assigned). Additionally, the `tokensByTokenSymbol` dictionary
+ * and an optional Ethereum address (if assigned). Additionally, the `tokenByTokenSymbol` dictionary
  * allows for easy retrieval of tokens based on their symbol.
  */
 
@@ -100,7 +100,7 @@ const YIELDETH = new Token(TokenSymbol.YIELDETH, 18)
 const YFI = new Token(TokenSymbol.YFI, 18)
 const ZRX = new Token(TokenSymbol.ZRX, 18)
 
-export type TokensByTokenSymbol = {
+export type TokenByTokenSymbol = {
     [key in TokenSymbol]: Token;
 };
 
@@ -109,7 +109,7 @@ export type TokensByTokenSymbol = {
  * This allows for easy lookup and provides a unified way to access token-specific details
  * throughout the application.
  */
-export const tokensByTokenSymbol: TokensByTokenSymbol = {
+export const tokenByTokenSymbol: TokenByTokenSymbol = {
     ETH,
     WETH,
     STETH,
