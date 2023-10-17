@@ -1,7 +1,7 @@
 import {getLabelByDenominationSymbol} from "./get-denomination-symbol";
 import {getLabelByLendingProtocol} from "./get-lending-protocols";
 import {getNetworkNameByNetwork} from "./get-networks";
-import {getTokenByTokenSymbol} from "./get-tokens-by-token-symbol";
+import {getTokenByTokenSymbol} from "./get-token-by-token-symbol";
 import {getTokensByNetwork} from "./get-tokens-by-network";
 
 export default function () {

@@ -1,5 +1,11 @@
 import {ADDRESSES, ADDRESS_ZERO, Common, SystemKeys} from '@oasisdex/addresses'
-import {IToken, Network, TokenSymbol, Tokens, tokens} from "🤝";
+import {
+    IToken,
+    Network,
+    TokenByTokenSymbol,
+    TokenSymbol,
+    tokenByTokenSymbol
+} from "🤝";
 
 type TokenSubset = {
     [key in TokenSymbol]?: IToken;
@@ -24,18 +30,18 @@ export const getTokensByNetwork = (): NetworkTokens => {
 
     return {
         [Network.MAINNET]: [
-            ...generateEntries(tokens, mainnetCommon)
+            ...generateEntries(tokenByTokenSymbol, mainnetCommon)
         ],
         [Network.OPTIMISM]: [
-            ...generateEntries(tokens, optimismCommon),
+            ...generateEntries(tokenByTokenSymbol, optimismCommon),
         ],
         [Network.ARBITRUM]: [
-            ...generateEntries(tokens, arbitrumCommon),
+            ...generateEntries(tokenByTokenSymbol, arbitrumCommon),
         ],
         [Network.BASE]: [],
         [Network.POLYGON]: [],
         [Network.GOERLI]: [
-            ...generateEntries(tokens, goerliCommon),
+            ...generateEntries(tokenByTokenSymbol, goerliCommon),
         ],
         [Network.OPTIMISM_GOERLI]: [],
         [Network.ARBITRUM_GOERLI]: [],
@@ -43,10 +49,10 @@ export const getTokensByNetwork = (): NetworkTokens => {
     }
 };
 
-function generateEntries(tokens: Tokens, networkCommonAddresses: Record<Common, string>) {
+function generateEntries(tokenByTokenSymbol: TokenByTokenSymbol, networkCommonAddresses: Record<Common, string>) {
     const entries = [];
 
-    for (const tokenSymbol in tokens) {
+    for (const tokenSymbol in tokenByTokenSymbol) {
         // We're forcing the type here because we know that the tokenSymbol is (or should be) a key of Tokens
         const address = networkCommonAddresses[tokenSymbol as keyof typeof networkCommonAddresses];
 
@@ -54,7 +60,7 @@ function generateEntries(tokens: Tokens, networkCommonAddresses: Record<Common, 
         // Also in case there's no overlap between tokenSymbols and networkCommonAddresses ignore the tokenSymbol
         if (address && address !== "" && address !== ADDRESS_ZERO) {
             const tokenObject = {
-                [tokenSymbol]: tokens[tokenSymbol as TokenSymbol].setAddress(address).toObject()
+                [tokenSymbol]: tokenByTokenSymbol[tokenSymbol as TokenSymbol].setAddress(address).toObject()
             };
             entries.push(tokenObject);
         }
