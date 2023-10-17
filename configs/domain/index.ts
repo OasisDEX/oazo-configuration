@@ -1,4 +1,4 @@
-import {getLabelByDenominationSymbols} from "./get-denomination-symbols";
+import {getLabelByDenominationSymbol} from "./get-denomination-symbol";
 import {getLabelByLendingProtocol} from "./get-lending-protocols";
 import {getNetworkNameByNetwork} from "./get-networks";
 import {getTokenByTokenSymbol} from "./get-tokens-by-token-symbol";
@@ -16,6 +16,6 @@ export default function () {
         tokensByNetwork: getTokensByNetwork(),
         labelByLendingProtocol: getLabelByLendingProtocol(),
         networkNameByNetwork: getNetworkNameByNetwork(),
-        labelByDenominationSymbol: getLabelByDenominationSymbols()
+        labelByDenominationSymbol: getLabelByDenominationSymbol()
     };
 }
