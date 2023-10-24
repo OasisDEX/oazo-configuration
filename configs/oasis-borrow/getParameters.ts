@@ -12,7 +12,7 @@ export const getParameters = ({
     message: "Oasis.app is now Summer.fi! Read the announcement",
   },
   locationBanner: {
-    UK: {
+    GB: {
         enabled: true,
         closeable: false,
         name: "uk_disclaimer",
