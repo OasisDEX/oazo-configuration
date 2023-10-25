@@ -1,5 +1,5 @@
 import { ConfigHelperType } from "⌨️";
-import {TokenSymbol} from "🤝";
+import { TokenSymbol } from "🤝";
 
 export const getParameters = ({
   notProduction,
@@ -13,12 +13,13 @@ export const getParameters = ({
   },
   locationBanner: {
     GB: {
-        enabled: true,
-        closeable: false,
-        name: "uk_disclaimer",
-        url: "https://docs.summer.fi/legal/uk-disclaimer",
-        message: "UK disclaimer: This web application is provided as a tool for users to interact with third party DeFi protocols on their own initiative, with no endorsement or recommendation of ... Read more",
-    }
+      enabled: true,
+      closeable: false,
+      name: "uk_disclaimer",
+      url: "https://docs.summer.fi/legal/uk-disclaimer",
+      message:
+        "UK disclaimer: This web application is provided as a tool for users to interact with third party DeFi protocols on their own initiative, with no endorsement or recommendation of ... Read more",
+    },
   },
   aaveLike: {
     orderInformation: {
@@ -31,6 +32,10 @@ export const getParameters = ({
     adjustDisabledFor: {
       collateral: [],
       strategyTypes: [],
+    },
+    flashLoanTokens: {
+      OPTIMISMMAINNET: "WETH",
+      BASEMAINNET: "USDBC",
     },
   },
 });
