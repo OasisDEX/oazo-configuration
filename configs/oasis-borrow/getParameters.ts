@@ -35,7 +35,7 @@ export const getParameters = ({
     },
     flashLoanTokens: {
       OPTIMISMMAINNET: "WETH",
-      BASEMAINNET: "USDBC",
+      BASEMAINNET: "WETH",
     },
   },
 });
