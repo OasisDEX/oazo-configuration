@@ -13,7 +13,7 @@ export const getFeatures = () => ({
   AjnaSafetySwitch: true,
   AjnaSuppressValidation: false,
   AnotherTestFeature: true, // used in unit tests
-  BaseNetworkEnabled: false,
+  BaseNetworkEnabled: true,
   ConstantMultipleReadOnly: false,
   DaiSavingsRate: true,
   DisableSidebarScroll: false,
