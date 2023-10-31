@@ -9,9 +9,10 @@ export const getFeatures = () => ({
   AaveV3Protection: true,
   AaveV3ProtectionWrite: true,
   AjnaPoolFinder: true,
-  AjnaReusableDPM: false,
   AjnaSafetySwitch: true,
   AjnaSuppressValidation: false,
+  MorphoSafetySwitch: false,
+  MorphoSuppressValidation: false,
   AnotherTestFeature: true, // used in unit tests
   BaseNetworkEnabled: true,
   ConstantMultipleReadOnly: false,
