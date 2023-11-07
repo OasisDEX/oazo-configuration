@@ -34,7 +34,7 @@ export const getFeatures = () => ({
   TestFeature: false, // used in unit tests
   UseNetworkSwitcherForks: false,
   UseNetworkSwitcherTestnets: false,
-  UseRpcGateway: false,
+  UseRpcGateway: true,
   NewPortfolio: false,
   MakerTenderly: false,
 });
