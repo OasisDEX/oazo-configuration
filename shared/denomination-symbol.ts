@@ -3,6 +3,7 @@
  * This provides a standardized way to reference these denominations throughout the application.
  */
 export enum DenominationSymbol {
+    USDT = 'USDT',// Tether
     USD = 'USD',  // United States Dollar
     ETH = 'ETH',  // Ethereum
     BTC = 'BTC',  // Bitcoin
