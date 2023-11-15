@@ -35,6 +35,6 @@ export const getFeatures = () => ({
   UseNetworkSwitcherForks: false,
   UseNetworkSwitcherTestnets: false,
   UseRpcGateway: true,
-  NewPortfolio: false,
+  NewPortfolio: true,
   MakerTenderly: false,
 });
