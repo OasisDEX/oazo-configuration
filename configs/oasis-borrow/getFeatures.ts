@@ -37,5 +37,5 @@ export const getFeatures = () => ({
   UseRpcGateway: true,
   NewPortfolio: true,
   MakerTenderly: false,
-  SparkWBTCDAI: false,
+  SparkWBTCDAI: true,
 });
