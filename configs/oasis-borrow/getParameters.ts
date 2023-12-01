@@ -38,4 +38,9 @@ export const getParameters = ({
       BASEMAINNET: "WETH",
     },
   },
+  subgraphs: {
+    baseUrl: notProduction
+      ? "https://graph.staging.summer.fi/subgraphs/name"
+      : "https://graph.staging.summer.fi/subgraphs/name",
+  },
 });
