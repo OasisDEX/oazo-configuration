@@ -40,7 +40,7 @@ export const getParameters = ({
   },
   subgraphs: {
     baseUrl: notProduction
-      ? "https://internal.subgraph.staging.oasisapp.dev"
+      ? "https://graph.staging.summer.fi/subgraphs/name"
       : "https://graph.staging.summer.fi/subgraphs/name",
   },
 });
