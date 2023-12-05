@@ -12,6 +12,7 @@ export const getFeatures = () => ({
   AaveV3OptimizationOptimism: false,
   AaveV3OptimizationArbitrum: false,
   AaveV3OptimizationBase: false,
+  AjnaBase: false,
   AjnaPoolFinder: true,
   AjnaSafetySwitch: true,
   AjnaSuppressValidation: false,
