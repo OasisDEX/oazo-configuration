@@ -1,9 +1,11 @@
-export const getFeatures = () => ({
+import { ConfigHelperType } from "⌨️";
+
+export const getFeatures = ({ isStaging }: ConfigHelperType) => ({
   AaveV3ArbitrumBorrow: true,
   AaveV3ArbitrumEarn: false,
   AaveV3EarncbETHeth: false,
   AaveV3EarnrETHeth: false,
-  AaveV3History: false,
+  AaveV3History: isStaging,
   AaveV3OptimismBorrow: true,
   AaveV3OptimismEarn: false,
   AaveV3Protection: true,
