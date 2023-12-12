@@ -37,6 +37,11 @@ export const getParameters = ({
       OPTIMISMMAINNET: "WETH",
       BASEMAINNET: "WETH",
     },
+    riskRatios: {
+      // uses new RiskRatio(new BigNumber(5), RiskRatio.TYPE.COL_RATIO) so its one over the number here
+      minimum: 5,
+      default: 5,
+    },
   },
   subgraphs: {
     baseUrl: notProduction
