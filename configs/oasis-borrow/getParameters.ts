@@ -39,7 +39,7 @@ export const getParameters = ({
     },
     riskRatios: {
       // uses new RiskRatio(new BigNumber(5), RiskRatio.TYPE.COL_RATIO) so its one over the number here
-      minimum: 5,
+      minimum: 100,
       default: 5,
     },
   },
