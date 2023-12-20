@@ -43,6 +43,14 @@ export const getParameters = ({
       default: 5,
     },
   },
+  connectionMethods: {
+    injected: true,
+    walletConnect: true,
+    walletLink: true,
+    gnosis: true,
+    ledger: false,
+    trezor: true
+  },
   subgraphs: {
     baseUrl: notProduction
       ? "https://satsuma.subgraph.staging.oasisapp.dev/subgraphs/name"
