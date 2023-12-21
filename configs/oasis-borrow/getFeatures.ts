@@ -5,7 +5,7 @@ export const getFeatures = ({ isStaging }: ConfigHelperType) => ({
   AaveV3ArbitrumEarn: false,
   AaveV3EarncbETHeth: false,
   AaveV3EarnrETHeth: false,
-  AaveV3History: isStaging,
+  AaveV3History: true,
   AaveV3OptimismBorrow: true,
   AaveV3OptimismEarn: false,
   AaveV3Protection: true,
