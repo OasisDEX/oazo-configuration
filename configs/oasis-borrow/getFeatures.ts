@@ -1,6 +1,6 @@
 import { ConfigHelperType } from "⌨️";
 
-export const getFeatures = ({ isStaging }: ConfigHelperType) => ({
+export const getFeatures = ({ isStaging: _isStaging }: ConfigHelperType) => ({
   AaveV3ArbitrumBorrow: true,
   AaveV3ArbitrumEarn: false,
   AaveV3EarncbETHeth: false,
