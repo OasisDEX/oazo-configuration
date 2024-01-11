@@ -44,6 +44,7 @@ export const getFeatures = ({ isStaging: _isStaging }: ConfigHelperType) => ({
   UseNetworkSwitcherTestnets: false,
   UseRpcGateway: true,
   NewPortfolio: true,
+  OmniPnlModal: false,
   MakerTenderly: false,
   SparkWBTCDAI: true,
 });
