@@ -47,4 +47,6 @@ export const getFeatures = ({ isStaging: _isStaging }: ConfigHelperType) => ({
   OmniPnlModal: false,
   MakerTenderly: false,
   SparkWBTCDAI: true,
+  AaveLikeSimpleEarnSafetySwitch: false,
+  AaveLikeSimpleEarnSuppressValidation: false,
 });
