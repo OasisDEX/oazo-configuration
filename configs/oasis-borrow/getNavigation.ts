@@ -55,18 +55,18 @@ export const getNavigation= () => ({
         },
         morphoBlue: {
             borrow: {
-                description: 'Lorem ipsum dolor sit amet.',
+                description: 'Borrow against multiple collaterals in a new decentralized protocol',
             },
             multiply: {
-                description: 'Lorem ipsum dolor sit amet.',
+                description: 'Multiply exposure to WSTETH and other assets with high LTV',
             },
             earn: {
-                description: 'Lorem ipsum dolor sit amet.',
+                description: 'Deposit to the most trusted MetaMorpho Vaults to earn a yield',
             },
             extra: {
-                title: 'Promoted product',
+                title: 'WSTETH/ETH yield Multiple',
                 description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    'Gain the best yield multiplying your WSTETH',
                 url: '/',
             },
         },
