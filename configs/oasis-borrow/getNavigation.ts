@@ -64,9 +64,9 @@ export const getNavigation= () => ({
                 description: 'Deposit to the most trusted MetaMorpho Vaults to earn a yield',
             },
             extra: {
-                title: 'WSTETH/ETH yield Multiple',
+                title: 'WSTETH/USDC Borrow',
                 description:
-                    'Gain the best yield multiplying your WSTETH',
+                    'Gain the most extra capital against your yielding ETH',
                 url: '/',
             },
         },
