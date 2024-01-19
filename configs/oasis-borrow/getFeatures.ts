@@ -14,7 +14,7 @@ export const getFeatures = ({ isStaging: _isStaging }: ConfigHelperType) => ({
   AaveV3OptimizationOptimism: false,
   AaveV3OptimizationArbitrum: false,
   AaveV3OptimizationBase: false,
-  AjnaBase: false,
+  AjnaBase: _isStaging,
   AjnaPoolFinder: true,
   AjnaSafetySwitch: false,
   AjnaSuppressValidation: false,
