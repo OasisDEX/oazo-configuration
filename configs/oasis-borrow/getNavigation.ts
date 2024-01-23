@@ -67,7 +67,7 @@ export const getNavigation= () => ({
                 title: 'WSTETH/USDC Borrow',
                 description:
                     'Gain the most extra capital against your yielding ETH',
-                url: '/',
+                url: '/ethereum/morphoblue/borrow/WSTETH-USDC',
             },
         },
         spark: {
