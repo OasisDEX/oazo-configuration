@@ -26,7 +26,7 @@ export const getFeatures = ({ isStaging: _isStaging }: ConfigHelperType) => ({
   DaiSavingsRate: true,
   DisableSidebarScroll: false,
   FollowAAVEVaults: false,
-  MorphoBlue: false,
+  MorphoBlue: true,
   NewNavigation: true,
   ProxyCreationDisabled: false,
   ProxyReveal: false,
