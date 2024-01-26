@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/OasisDEX/oazo-configuration#readme",
   "dependencies": {
-    "@oasisdex/addresses": "0.1.7",
+    "@oasisdex/addresses": "0.1.16-dma-v2-workers.3",
     "@types/node": "^20.5.9",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
