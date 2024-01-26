@@ -51,6 +51,11 @@ export const getParameters = ({
     ledger: false,
     trezor: true
   },
+  walletRpc: {
+    8453: "https://mainnet.base.org/", // Base
+    10: "https://mainnet.optimism.io/", // Optimism
+    42161: "https://arb1.arbitrum.io/rpc", // Arbitrum
+  },
   subgraphs: {
     baseUrl: notProduction
       ? "https://satsuma.subgraph.staging.oasisapp.dev/subgraphs/name"
