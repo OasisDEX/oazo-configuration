@@ -53,4 +53,5 @@ export const getFeatures = ({ isStaging: _isStaging }: ConfigHelperType) => ({
   SparkWBTCDAI: true,
   AaveLikeSimpleEarnSafetySwitch: false,
   AaveLikeSimpleEarnSuppressValidation: false,
+  EnableMigrations: _isStaging,
 });
