@@ -60,9 +60,9 @@ export const getParameters = ({
       [Network.ARBITRUM]: {
         [LendingProtocol.AaveV3]: 100,
       },
-        [Network.OPTIMISM]: {
-          [LendingProtocol.AaveV3]: 100,
-        },
+      [Network.OPTIMISM]: {
+        [LendingProtocol.AaveV3]: 100,
+      },
       [Network.BASE]: {
         [LendingProtocol.AaveV3]: 100,
       },
