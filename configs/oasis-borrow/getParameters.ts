@@ -1,5 +1,5 @@
 import { ConfigHelperType } from "⌨️";
-import { TokenSymbol } from "🤝";
+import { LendingProtocol, Network, TokenSymbol } from "🤝";
 
 export const getParameters = ({
   notProduction,
@@ -50,6 +50,24 @@ export const getParameters = ({
     gnosis: true,
     ledger: false,
     trezor: true
+  },
+  automation: {
+    minNetValueUSD: {
+      [Network.MAINNET]: {
+        [LendingProtocol.AaveV3]: 10_000,
+        [LendingProtocol.SparkV3]: 10_000,
+      },
+      [Network.ARBITRUM]: {
+        [LendingProtocol.AaveV3]: 100,
+      },
+        [Network.OPTIMISM]: {
+          [LendingProtocol.AaveV3]: 100,
+        },
+      [Network.BASE]: {
+        [LendingProtocol.AaveV3]: 100,
+      },
+    },
+    defaultMinValue: 10_000
   },
   walletRpc: {
     8453: "https://mainnet.base.org/", // Base
