@@ -29,6 +29,12 @@ export const getFeatures = ({ isStaging: _isStaging }: ConfigHelperType) => ({
   AjnaSuppressValidation: false,
   MorphoSafetySwitch: false,
   MorphoSuppressValidation: false,
+  AaveV2SafetySwitch: false,
+  AaveV2SuppressValidation: false,
+  AaveV3SafetySwitch: false,
+  AaveV3SuppressValidation: false,
+  SparkSafetySwitch: false,
+  SparkSuppressValidation: false,
   AnotherTestFeature: true, // used in unit tests
   BaseNetworkEnabled: true,
   ConstantMultipleReadOnly: false,
