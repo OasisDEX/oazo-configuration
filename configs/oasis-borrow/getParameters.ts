@@ -79,7 +79,7 @@ export const getParameters = ({
       ? "https://satsuma.subgraph.staging.oasisapp.dev/subgraphs/name"
       : "https://satsuma.subgraph.staging.oasisapp.dev/subgraphs/name",
     baseShortUrl: notProduction
-      ? "https://satsuma.subgraph.staging.oasisapp.dev"
+      ? "https://subgraph.staging.oasisapp.dev"
       : "https://satsuma.subgraph.staging.oasisapp.dev",
   },
 });
