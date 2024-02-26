@@ -22,6 +22,7 @@ export const getFeatures = ({ isStaging: _isStaging }: ConfigHelperType) => ({
   AaveV3TrailingStopLossLambdaOptimism: true,
   AaveV3TrailingStopLossLambdaArbitrum: true,
   AaveV3TrailingStopLossLambdaBase: true,
+  SparkTrailingStopLossLambdaEthereum: false,
   SparkProtectionLambdaEthereum: false,
   AjnaBase: true,
   AjnaPoolFinder: true,
