@@ -58,10 +58,12 @@ function generateEntries(
 
   for (const tokenSymbol in tokenByTokenSymbol) {
     // We're forcing the type here because we know that the tokenSymbol is (or should be) a key of Tokens
-    const address =
-      networkCommonAddresses[
-        tokenSymbol as keyof typeof networkCommonAddresses
-      ];
+    let address;
+    if (tokenSymbol === 'USDCE') {
+      address = networkCommonAddresses['USDC.E'];
+    } else {
+      address = networkCommonAddresses[tokenSymbol as keyof typeof networkCommonAddresses];
+    }
 
     // Check if the address is neither ZERO_ADDRESS nor an empty string.
     // Also in case there's no overlap between tokenSymbols and networkCommonAddresses ignore the tokenSymbol
