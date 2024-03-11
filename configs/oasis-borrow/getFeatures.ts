@@ -40,6 +40,7 @@ export const getFeatures = ({ isStaging: _isStaging }: ConfigHelperType) => ({
   AaveV2SuppressValidation: false,
   AaveV3SafetySwitch: false,
   AaveV3SuppressValidation: false,
+  AaveV3LambdaSuppressValidation: false,
   SparkSafetySwitch: false,
   SparkSuppressValidation: false,
   AnotherTestFeature: true, // used in unit tests
