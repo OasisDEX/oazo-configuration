@@ -46,6 +46,7 @@ const WSTETH = new Token(TokenSymbol.WSTETH, 18)
 const WBTC = new Token(TokenSymbol.WBTC, 8)
 const USDC = new Token(TokenSymbol.USDC, 6)
 const USDBC = new Token(TokenSymbol.USDBC, 6)
+const USDCE = new Token(TokenSymbol.USDCE, 6)
 const DAI = new Token(TokenSymbol.DAI, 18)
 const CBETH = new Token(TokenSymbol.CBETH, 8)
 const RETH = new Token(TokenSymbol.RETH, 8)
@@ -118,6 +119,7 @@ export const tokenByTokenSymbol: TokenByTokenSymbol = {
     WBTC,
     USDC,
     USDBC,
+    USDCE,
     DAI,
     CBETH,
     RETH,
