@@ -29,7 +29,7 @@ export const getFeatures = ({ isStaging: _isStaging }: ConfigHelperType) => ({
   AaveV3PartialTakeProfitLambdaOptimism: true,
   AaveV3PartialTakeProfitLambdaArbitrum: true,
   AaveV3PartialTakeProfitLambdaBase: true,
-  SparkPartialTakeProfitLambdaEthereum: false,
+  SparkPartialTakeProfitLambdaEthereum: true,
   AjnaBase: true,
   AjnaPoolFinder: true,
   AjnaSafetySwitch: false,
