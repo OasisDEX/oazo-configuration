@@ -77,4 +77,8 @@ export const getFeatures = ({ isStaging: _isStaging }: ConfigHelperType) => ({
   Erc4626Vaults: false,
   Erc4626VaultsSafetySwitch: false,
   Erc4626VaultsSuppressValidation: false,
+  DsProxyMigrationEthereum: false,
+  DsProxyMigrationOptimism: false,
+  DsProxyMigrationArbitrum: false,
+  DsProxyMigrationBase: false,
 });
