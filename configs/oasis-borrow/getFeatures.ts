@@ -74,7 +74,7 @@ export const getFeatures = ({ isStaging: _isStaging }: ConfigHelperType) => ({
   AaveLikeSimpleEarnSuppressValidation: false,
   EnableMigrations: true,
   EnableRefinance: false,
-  Erc4626Vaults: false,
+  Erc4626Vaults: true,
   Erc4626VaultsSafetySwitch: false,
   Erc4626VaultsSuppressValidation: false,
   DsProxyMigrationEthereum: false,
