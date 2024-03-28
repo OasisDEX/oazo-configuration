@@ -82,4 +82,5 @@ export const getFeatures = ({ isStaging: _isStaging }: ConfigHelperType) => ({
   DsProxyMigrationArbitrum: false,
   DsProxyMigrationBase: false,
   UseOmniKitLinks: false,
+  OmniKitDebug: false,
 });
