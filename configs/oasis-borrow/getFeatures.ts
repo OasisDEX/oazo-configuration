@@ -1,6 +1,6 @@
 import { ConfigHelperType } from "⌨️";
 
-export const getFeatures = ({ isStaging: _isStaging }: ConfigHelperType) => ({
+export const getFeatures = ({ notProduction }: ConfigHelperType) => ({
   AaveV3ArbitrumBorrow: true,
   AaveV3ArbitrumEarn: false,
   AaveV3EarncbETHeth: false,
@@ -86,4 +86,21 @@ export const getFeatures = ({ isStaging: _isStaging }: ConfigHelperType) => ({
   UseOmniKitLinks: false,
   OmniKitDebug: false,
   ProductHubDebug: false,
+  LambdaAutomations: {
+    // same as AutomationFeatures enum in OB
+    AaveV3: {
+      autoBuy: true,
+      autoSell: true,
+      partialTakeProfit: true,
+      stopLoss: true,
+      trailingStopLoss: true,
+    },
+    MorphoBlue: {
+      autoBuy: notProduction,
+      autoSell: notProduction,
+      partialTakeProfit: notProduction,
+      stopLoss: notProduction,
+      trailingStopLoss: notProduction,
+    },
+  },
 });
