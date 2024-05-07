@@ -4,15 +4,11 @@ import { getNavigation } from "./getNavigation";
 import { getParameters } from "./getParameters";
 import { getRpcConfig } from "./getRpcConfig";
 
-export default function ({
-  isDevelopment: _isDevelopment,
-  notProduction,
-  isStaging,
-}: ConfigHelperType) {
+export default function (params: ConfigHelperType) {
   return {
-    features: getFeatures({ isStaging }),
-    parameters: getParameters({ notProduction }),
+    features: getFeatures(params),
+    parameters: getParameters(params),
     navigation: getNavigation(),
-    rpcConfig: getRpcConfig({ notProduction }),
+    rpcConfig: getRpcConfig(params),
   };
 }
