@@ -97,11 +97,11 @@ export const getFeatures = ({ notProduction }: ConfigHelperType) => ({
       trailingStopLoss: true,
     },
     MorphoBlue: {
-      autoBuy: notProduction,
-      autoSell: notProduction,
-      partialTakeProfit: notProduction,
-      stopLoss: notProduction,
-      trailingStopLoss: notProduction,
+      autoBuy: true,
+      autoSell: true,
+      partialTakeProfit: true,
+      stopLoss: true,
+      trailingStopLoss: true,
     },
   },
 });
