@@ -73,7 +73,7 @@ export const getFeatures = ({ notProduction }: ConfigHelperType) => ({
   AaveLikeSimpleEarnSafetySwitch: false,
   AaveLikeSimpleEarnSuppressValidation: false,
   EnableMigrations: true,
-  EnableRefinance: true,
+  EnableRefinance: false,
   RefinanceSafetySwitch: false,
   RefinanceSuppressValidation: false,
   Erc4626Vaults: true,
