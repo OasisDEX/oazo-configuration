@@ -1,5 +1,3 @@
-import {TokenSymbol} from "🤝";
-
 export const getProducts = () => ({
     borrow: {
         ethereum: [
