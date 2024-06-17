@@ -4,120 +4,120 @@ export const getProducts = () => ({
     borrow: {
         ethereum: [
             {
-                label: 'WSTETH/USDC', tokens: [TokenSymbol.WSTETH, TokenSymbol.USDC], link: '/ethereum/morphoblue/borrow/WSTETH-USDC'
+                label: 'WSTETH/USDC', protocol: 'morphoblue'
             },
             {
-                label: 'ETH/DAI', tokens: [TokenSymbol.ETH, TokenSymbol.DAI], link: '/ethereum/aave/v3/borrow/ETH-DAI'
+                label: 'ETH/DAI', protocol: 'aavev3'
             },
             {
-                label: 'WBTC/DAI', tokens: [TokenSymbol.WBTC, TokenSymbol.DAI], link: '/ethereum/spark/borrow/WBTC-DAI'
+                label: 'WBTC/DAI', protocol: 'spark'
             },
         ],
         base: [
             {
-                label: 'ETH/USDC', tokens: [TokenSymbol.ETH, TokenSymbol.USDC], link: '/base/aave/v3/borrow/ETH-USDC'
+                label: 'ETH/USDC', protocol: 'aavev3'
             },
             {
-                label: 'CBETH/USDC', tokens: [TokenSymbol.CBETH, TokenSymbol.USDC], link: '/base/aave/v3/borrow/CBETH-USDC'
+                label: 'CBETH/USDC', protocol: 'aavev3'
             },
         ],
         arbitrum: [
             {
-                label: 'ETH/USDC', tokens: [TokenSymbol.ETH, TokenSymbol.USDC], link: '/arbitrum/aave/v3/borrow/ETH-USDC'
+                label: 'ETH/USDC', protocol: 'aavev3'
             },
             {
-                label: 'WSTETH/USDC', tokens: [TokenSymbol.WSTETH, TokenSymbol.USDC], link: '/arbitrum/aave/v3/borrow/WSTETH-USDC'
+                label: 'WSTETH/USDC', protocol: 'aavev3'
             },
             {
-                label: 'WBTC/USDC', tokens: [TokenSymbol.WBTC, TokenSymbol.USDC], link: '/arbitrum/aave/v3/borrow/WBTC-USDC'
+                label: 'WBTC/USDC', protocol: 'aavev3'
             },
         ],
         optimism: [
             {
-                label: 'ETH/USDC', tokens: [TokenSymbol.ETH, TokenSymbol.USDC], link: '/optimism/aave/v3/borrow/ETH-USDC'
+                label: 'ETH/USDC', protocol: 'aavev3'
             },
             {
-                label: 'WSTETH/USDC', tokens: [TokenSymbol.WSTETH, TokenSymbol.USDC], link: '/optimism/aave/v3/borrow/WSTETH-USDC'
+                label: 'WSTETH/USDC', protocol: 'aavev3'
             },
             {
-                label: 'WBTC/USDC', tokens: [TokenSymbol.WBTC, TokenSymbol.USDC], link: '/optimism/aave/v3/borrow/WBTC-USDC'
+                label: 'WBTC/USDC', protocol: 'aavev3'
             },
         ],
     },
     multiply: {
         ethereum: [
             {
-                label: 'WSTETH/USDC', tokens: [TokenSymbol.WSTETH, TokenSymbol.USDC], link: '/ethereum/morphoblue/multiply/WSTETH-USDC'
+                label: 'WSTETH/USDC', protocol: 'morphoblue'
             },
             {
-                label: 'ETH/DAI', tokens: [TokenSymbol.ETH, TokenSymbol.DAI], link: '/ethereum/spark/multiply/ETH-DAI'
+                label: 'ETH/DAI', protocol: 'spark'
             },
             {
-                label: 'WBTC/USDT', tokens: [TokenSymbol.WBTC, TokenSymbol.USDT], link: '/ethereum/morphoblue/multiply/WBTC-USDT'
+                label: 'WBTC/USDT', protocol: 'morphoblue'
             },
         ],
         base: [
             {
-                label: 'ETH/USDC', tokens: [TokenSymbol.ETH, TokenSymbol.USDC], link: '/base/aave/v3/multiply/ETH-USDC'
+                label: 'ETH/USDC', protocol: 'aavev3'
             },
             {
-                label: 'CBETH/USDC', tokens: [TokenSymbol.CBETH, TokenSymbol.USDC], link: '/base/aave/v3/multiply/CBETH-USDC'
+                label: 'CBETH/USDC', protocol: 'aavev3'
             },
         ],
         arbitrum: [
             {
-                label: 'ETH/USDC', tokens: [TokenSymbol.ETH, TokenSymbol.USDC], link: '/arbitrum/aave/v3/multiply/ETH-USDC'
+                label: 'ETH/USDC', protocol: 'aavev3'
             },
             {
-                label: 'WBTC/USDC', tokens: [TokenSymbol.WBTC, TokenSymbol.USDC], link: '/arbitrum/aave/v3/multiply/WBTC-USDC'
+                label: 'WBTC/USDC', protocol: 'aavev3'
             },
             {
-                label: 'WSTETH/USDC', tokens: [TokenSymbol.WSTETH, TokenSymbol.USDC], link: '/arbitrum/aave/v3/multiply/WSTETH-USDC'
+                label: 'WSTETH/USDC', protocol: 'aavev3'
             },
         ],
         optimism: [
             {
-                label: 'ETH/USDC', tokens: [TokenSymbol.ETH, TokenSymbol.USDC], link: '/optimism/aave/v3/multiply/ETH-USDC'
+                label: 'ETH/USDC', protocol: 'aavev3'
             },
             {
-                label: 'WBTC/USDC', tokens: [TokenSymbol.WBTC, TokenSymbol.USDC], link: '/optimism/aave/v3/multiply/WBTC-USDC'
+                label: 'WBTC/USDC', protocol: 'aavev3'
             },
             {
-                label: 'WBTC/DAI', tokens: [TokenSymbol.WBTC, TokenSymbol.DAI], link: '/optimism/aave/v3/multiply/WBTC-DAI'
+                label: 'WBTC/DAI', protocol: 'aavev3'
             },
         ],
     },
     earn: {
         ethereum: [
             {
-                label: 'USDC Steakhouse', tokens: [TokenSymbol.USDC], link: '/ethereum/erc-4626/earn/steakhouse-USDC'
+                label: 'Steakhouse USDC', protocol: 'morphoblue'
             },
             {
-                label: 'WSTETH/ETH Yield Loop', tokens: [TokenSymbol.WSTETH, TokenSymbol.ETH], link: '/ethereum/spark/multiply/WSTETH-ETH'
+                label: 'WSTETH/ETH', protocol: 'spark'
             },
             {
-                label: 'ETH Flagship', tokens: [TokenSymbol.ETH], link: '/ethereum/erc-4626/earn/flagship-ETH'
+                label: 'Flagship ETH', protocol: 'morphoblue'
             },
         ],
         base: [
             {
-                label: 'CBETH/ETH Yield Loop', tokens: [TokenSymbol.CBETH, TokenSymbol.ETH], link: '/base/aave/v3/multiply/CBETH-ETH'
+                label: 'CBETH/ETH', protocol: 'aavev3'
             },
             {
-                label: 'WSTETH/ETH LP', tokens: [TokenSymbol.WSTETH, TokenSymbol.ETH], link: '/base/ajna/earn/WSTETH-ETH#setup'
+                label: 'WSTETH/ETH', protocol: 'ajna'
             },
         ],
         arbitrum: [
             {
-                label: 'WSTETH/ETH Yield Loop', tokens: [TokenSymbol.WSTETH, TokenSymbol.ETH], link: '/arbitrum/aave/v3/multiply/WSTETH-ETH'
+                label: 'WSTETH/ETH', protocol: 'aavev3'
             },
             {
-                label: 'RETH/ETH Yield Loop', tokens: [TokenSymbol.RETH, TokenSymbol.ETH], link: '/arbitrum/aave/v3/multiply/RETH-ETH'
+                label: 'RETH/ETH', protocol: 'aavev3'
             },
         ],
         optimism: [
             {
-                label: 'WSTETH/ETH Yield Loop', tokens: [TokenSymbol.WSTETH, TokenSymbol.ETH], link: '/optimism/aave/v3/multiply/WSTETH-ETH'
+                label: 'WSTETH/ETH', protocol: 'morphoblue'
             },
         ],
     },
