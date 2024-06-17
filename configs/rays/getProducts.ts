@@ -115,7 +115,7 @@ export const getProducts = () => ({
         ],
         optimism: [
             {
-                label: 'WSTETH/ETH', protocol: 'morphoblue'
+                label: 'WSTETH/ETH', protocol: 'aavev3'
             },
         ],
     },
