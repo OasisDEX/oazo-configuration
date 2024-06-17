@@ -8,7 +8,7 @@ export const getProducts = () => ({
                 label: 'ETH/DAI', protocol: 'aavev3'
             },
             {
-                label: 'WBTC/DAI', protocol: 'spark'
+                label: 'WBTC/DAI', protocol: 'sparkv3'
             },
         ],
         base: [
@@ -48,7 +48,7 @@ export const getProducts = () => ({
                 label: 'WSTETH/USDC', protocol: 'morphoblue'
             },
             {
-                label: 'ETH/DAI', protocol: 'spark'
+                label: 'ETH/DAI', protocol: 'sparkv3'
             },
             {
                 label: 'WBTC/USDT', protocol: 'morphoblue'
@@ -91,7 +91,7 @@ export const getProducts = () => ({
                 label: 'Steakhouse USDC', protocol: 'morphoblue'
             },
             {
-                label: 'WSTETH/ETH', protocol: 'spark'
+                label: 'WSTETH/ETH', protocol: 'sparkv3'
             },
             {
                 label: 'Flagship ETH', protocol: 'morphoblue'
