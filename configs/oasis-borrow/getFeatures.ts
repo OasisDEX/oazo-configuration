@@ -104,4 +104,5 @@ export const getFeatures = ({ notProduction }: ConfigHelperType) => ({
       trailingStopLoss: true,
     },
   },
+  Rays: false,
 });
