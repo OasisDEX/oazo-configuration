@@ -37,6 +37,7 @@ export const getParameters = ({
       OPTIMISMMAINNET: "WETH",
       BASEMAINNET: "WETH",
     },
+    isolatedCollateralTokens: ['LDO', 'FRAX', 'MKR', 'SUSDE'],
     riskRatios: {
       // uses new RiskRatio(new BigNumber(5), RiskRatio.TYPE.COL_RATIO) so its one over the number here
       minimum: 100,
