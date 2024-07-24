@@ -12,9 +12,9 @@ export const getParameters = ({
     message: "Oasis.app is now Summer.fi! Read the announcement",
   },
   announcement: {
-    enabled: false,
-    message: "Announcement :)",
-    url: "https://blog.summer.fi/",
+    enabled: notProduction,
+    message: "Celebrating ETH ETFs with a Special Offer: Double your $RAYS with ETH",
+    url: "https://blog.summer.fi/celebrating-eth-etf-double-your-rays/ ",
     icon: "rays",
   },
   locationBanner: {
