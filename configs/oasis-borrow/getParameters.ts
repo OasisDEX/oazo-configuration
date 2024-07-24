@@ -11,6 +11,12 @@ export const getParameters = ({
     url: "https://blog.summer.fi/oasis-app-rebrands-to-summer-fi/",
     message: "Oasis.app is now Summer.fi! Read the announcement",
   },
+  announcement: {
+    enabled: false,
+    message: "Announcement :)",
+    url: "https://blog.summer.fi/",
+    icon: "rays",
+  },
   locationBanner: {
     GB: {
       enabled: true,
