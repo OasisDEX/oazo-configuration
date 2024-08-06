@@ -12,9 +12,9 @@ export const getParameters = ({
     message: "Oasis.app is now Summer.fi! Read the announcement",
   },
   announcement: {
-    enabled: false,
-    message: "Celebrating ETH ETFs with a Special Offer: Double your $RAYS with ETH",
-    url: "https://blog.summer.fi/celebrating-eth-etf-double-your-rays/ ",
+    enabled: true,
+    message: "2x $RAYS for Multiply and Yield Loop Trades",
+    url: "https://blog.summer.fi/double-rays-for-multiply-and-yield-loop-trades/",
     icon: "rays",
   },
   locationBanner: {
