@@ -106,5 +106,5 @@ export const getFeatures = ({ notProduction }: ConfigHelperType) => ({
     },
   },
   Rays: true,
-  RaysDailyChallenge: notProduction,
+  RaysDailyChallenge: true,
 });
