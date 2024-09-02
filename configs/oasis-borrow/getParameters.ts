@@ -13,8 +13,8 @@ export const getParameters = ({
   },
   announcement: {
     enabled: true,
-    message: "2x $RAYS for Multiply and Yield Loop Trades",
-    url: "https://blog.summer.fi/double-rays-for-multiply-and-yield-loop-trades/",
+    message: "Double your $RAYS with Spark and Summer.fi",
+    url: "https://blog.summer.fi/boost-rays-with-spark/",
     icon: "rays",
   },
   locationBanner: {
