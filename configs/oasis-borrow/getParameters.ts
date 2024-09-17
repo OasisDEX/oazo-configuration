@@ -13,7 +13,7 @@ export const getParameters = ({
   },
   announcement: notProduction ? {
     enabled: true,
-    message: "The Sky Ecosystem is here, Upgrade your $DAI to $USDS, your $MKR to $USDS, and deposit to start earning $SKY rewards.",
+    message: "The Sky Ecosystem is here, Upgrade your $DAI to $USDS, your $MKR to $SKY, and deposit to start earning $SKY rewards.",
     url: "https://blog.summer.fi/sky-on-summer",
     icon: "star",
   } : {
