@@ -11,7 +11,12 @@ export const getParameters = ({
     url: "https://blog.summer.fi/oasis-app-rebrands-to-summer-fi/",
     message: "Oasis.app is now Summer.fi! Read the announcement",
   },
-  announcement: {
+  announcement: notProduction ? {
+    enabled: true,
+    message: "The Sky Ecosystem is here, Upgrade your $DAI to $USDS, your $MKR to $USDS, and deposit to start earning $SKY rewards.",
+    url: "https://blog.summer.fi/sky-on-summer",
+    icon: "star",
+  } : {
     enabled: true,
     message: "Double your $RAYS with Spark and Summer.fi",
     url: "https://blog.summer.fi/boost-rays-with-spark/",
