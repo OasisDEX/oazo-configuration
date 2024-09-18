@@ -15,7 +15,7 @@ export const getParameters = ({
     enabled: true,
     message:
       "The Sky Ecosystem is here, Upgrade your $DAI to $USDS, your $MKR to $SKY, and deposit to start earning $SKY rewards.",
-    url: "https://summer.fi/ethereum/sky/upgrade",
+    url: "/ethereum/sky/upgrade",
     icon: "sky",
   },
   locationBanner: {
