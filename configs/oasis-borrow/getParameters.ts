@@ -14,8 +14,8 @@ export const getParameters = ({
   announcement: notProduction ? {
     enabled: true,
     message: "The Sky Ecosystem is here, Upgrade your $DAI to $USDS, your $MKR to $SKY, and deposit to start earning $SKY rewards.",
-    url: "https://blog.summer.fi/sky-on-summer",
-    icon: "star",
+    url: "https://summer.fi/ethereum/sky/upgrade",
+    icon: "sky",
   } : {
     enabled: true,
     message: "Double your $RAYS with Spark and Summer.fi",
