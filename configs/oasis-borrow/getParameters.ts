@@ -11,16 +11,12 @@ export const getParameters = ({
     url: "https://blog.summer.fi/oasis-app-rebrands-to-summer-fi/",
     message: "Oasis.app is now Summer.fi! Read the announcement",
   },
-  announcement: notProduction ? {
+  announcement: {
     enabled: true,
-    message: "The Sky Ecosystem is here, Upgrade your $DAI to $USDS, your $MKR to $SKY, and deposit to start earning $SKY rewards.",
+    message:
+      "The Sky Ecosystem is here, Upgrade your $DAI to $USDS, your $MKR to $SKY, and deposit to start earning $SKY rewards.",
     url: "https://summer.fi/ethereum/sky/upgrade",
     icon: "sky",
-  } : {
-    enabled: true,
-    message: "Double your $RAYS with Spark and Summer.fi",
-    url: "https://blog.summer.fi/boost-rays-with-spark/",
-    icon: "rays",
   },
   locationBanner: {
     GB: {
@@ -48,7 +44,7 @@ export const getParameters = ({
       OPTIMISMMAINNET: "WETH",
       BASEMAINNET: "WETH",
     },
-    isolatedCollateralTokens: ['LDO', 'FRAX', 'MKR', 'SUSDE'],
+    isolatedCollateralTokens: ["LDO", "FRAX", "MKR", "SUSDE"],
     riskRatios: {
       // uses new RiskRatio(new BigNumber(5), RiskRatio.TYPE.COL_RATIO) so its one over the number here
       minimum: 100,
@@ -61,7 +57,7 @@ export const getParameters = ({
     walletLink: true,
     gnosis: true,
     ledger: false,
-    trezor: true
+    trezor: true,
   },
   automation: {
     minNetValueUSD: {
@@ -79,7 +75,7 @@ export const getParameters = ({
         [LendingProtocol.AaveV3]: 100,
       },
     },
-    defaultMinValue: 10_000
+    defaultMinValue: 10_000,
   },
   walletRpc: {
     8453: "https://mainnet.base.org/", // Base
