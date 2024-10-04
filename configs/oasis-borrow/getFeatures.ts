@@ -86,7 +86,7 @@ export const getFeatures = ({ notProduction }: ConfigHelperType) => ({
   UseOmniKitLinks: false,
   OmniKitDebug: false,
   ProductHubDebug: false,
-  Newsletter: notProduction,
+  Newsletter: true,
   SkyUpgrade: true,
   LambdaAutomations: {
     DisableNetValueCheck: notProduction,
