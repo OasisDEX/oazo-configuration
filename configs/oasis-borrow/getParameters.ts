@@ -11,21 +11,13 @@ export const getParameters = ({
     url: "https://blog.summer.fi/oasis-app-rebrands-to-summer-fi/",
     message: "Oasis.app is now Summer.fi! Read the announcement",
   },
-  announcement: notProduction
-    ? {
-        enabled: true,
-        message:
-          "$MORPHO is now claimable. Claim now from your Summer.fi position. More info",
-        url: "#",
-        icon: "morpho_circle_color",
-      }
-    : {
-        enabled: true,
-        message:
-          "The Sky Ecosystem is here, Upgrade your $DAI to $USDS, your $MKR to $SKY, and deposit to start earning $SKY rewards.",
-        url: "/ethereum/sky/upgrade",
-        icon: "sky",
-      },
+  announcement: {
+    enabled: true,
+    message:
+      "$MORPHO is now claimable. Claim now from your Summer.fi position. More info",
+    url: "https://x.com/summerfinance_/status/1859549734219686226",
+    icon: "morpho_circle_color",
+  },
   locationBanner: {
     GB: {
       enabled: true,
