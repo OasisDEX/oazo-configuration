@@ -3,14 +3,14 @@ import {
   ADDRESS_ZERO,
   Common,
   SystemKeys,
-} from "@oasisdex/addresses";
+} from '@oasisdex/addresses';
 import {
   IToken,
   Network,
   TokenByTokenSymbol,
   TokenSymbol,
   tokenByTokenSymbol,
-} from "🤝";
+} from '🤝';
 
 type TokenSubset = {
   [key in TokenSymbol]?: IToken;
@@ -29,9 +29,6 @@ export const getTokensByNetwork = (): NetworkTokens => {
   const optimismCommon = ADDRESSES[Network.OPTIMISM][SystemKeys.COMMON];
   const arbitrumCommon = ADDRESSES[Network.ARBITRUM][SystemKeys.COMMON];
   const baseCommon = ADDRESSES[Network.BASE][SystemKeys.COMMON];
-  // const polygonCommon = ADDRESSES[Networks.POLYGON][SystemKeys.COMMON]
-  const goerliCommon = ADDRESSES[Network.GOERLI][SystemKeys.COMMON];
-  // const optimismGoerliCommon = ADDRESSES[Networks.OPTIMISM_GOERLI][SystemKeys.COMMON]
 
   return {
     [Network.MAINNET]: [...generateEntries(tokenByTokenSymbol, mainnetCommon)],
@@ -42,11 +39,6 @@ export const getTokensByNetwork = (): NetworkTokens => {
       ...generateEntries(tokenByTokenSymbol, arbitrumCommon),
     ],
     [Network.BASE]: [...generateEntries(tokenByTokenSymbol, baseCommon)],
-    [Network.POLYGON]: [],
-    [Network.GOERLI]: [...generateEntries(tokenByTokenSymbol, goerliCommon)],
-    [Network.OPTIMISM_GOERLI]: [],
-    [Network.ARBITRUM_GOERLI]: [],
-    [Network.POLYGON_MUMBAI]: [],
   };
 };
 
@@ -62,12 +54,15 @@ function generateEntries(
     if (tokenSymbol === 'USDCE') {
       address = networkCommonAddresses['USDC.E'];
     } else {
-      address = networkCommonAddresses[tokenSymbol as keyof typeof networkCommonAddresses];
+      address =
+        networkCommonAddresses[
+          tokenSymbol as keyof typeof networkCommonAddresses
+        ];
     }
 
     // Check if the address is neither ZERO_ADDRESS nor an empty string.
     // Also in case there's no overlap between tokenSymbols and networkCommonAddresses ignore the tokenSymbol
-    if (address && address !== "" && address !== ADDRESS_ZERO) {
+    if (address && address !== '' && address !== ADDRESS_ZERO) {
       const tokenObject = {
         [tokenSymbol]: tokenByTokenSymbol[tokenSymbol as TokenSymbol]
           .setAddress(address)
