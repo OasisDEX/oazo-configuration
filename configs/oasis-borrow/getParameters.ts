@@ -14,9 +14,9 @@ export const getParameters = ({
   announcement: {
     enabled: true,
     message:
-      "The Sky Ecosystem is here, Upgrade your $DAI to $USDS, your $MKR to $SKY, and deposit to start earning $SKY rewards.",
-    url: "/ethereum/sky/upgrade",
-    icon: "sky",
+      "$MORPHO is now claimable. Claim now from your Summer.fi position. More info",
+    url: "https://x.com/summerfinance_/status/1859549734219686226",
+    icon: "morpho_circle_color",
   },
   locationBanner: {
     GB: {
