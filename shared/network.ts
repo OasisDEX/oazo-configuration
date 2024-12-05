@@ -5,8 +5,15 @@
  */
 export enum Network {
   // Mainnets
-  MAINNET = 'mainnet', // Ethereum Mainnet
-  OPTIMISM = 'optimism', // Optimism Layer 2 Mainnet
-  ARBITRUM = 'arbitrum', // Arbitrum Layer 2 Mainnet
-  BASE = 'base', // Base Layer 2 Mainnet (Coinbase)
+  MAINNET = "mainnet", // Ethereum Mainnet
+  OPTIMISM = "optimism", // Optimism Layer 2 Mainnet
+  ARBITRUM = "arbitrum", // Arbitrum Layer 2 Mainnet
+  BASE = "base", // Base Layer 2 Mainnet (Coinbase)
+}
+
+export enum NetworkIds {
+  MAINNET = 1,
+  ARBITRUMMAINNET = 42161,
+  OPTIMISMMAINNET = 10,
+  BASEMAINNET = 8453,
 }

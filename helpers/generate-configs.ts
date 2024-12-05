@@ -5,9 +5,7 @@ const generatingTimeStart = Date.now();
 
 export async function generateConfigs() {
   console.log(
-    `\n${formatting.green(
-      formatting.italic("Generating Oazo config files 🦾")
-    )}\n`
+    `\n${formatting.green(formatting.italic("Generating config files 🦾"))}\n`
   );
   const configModulesFolders = await getConfigMainModules();
   console.log(
@@ -41,8 +39,8 @@ export async function generateConfigs() {
   console.table(consoleReportData);
 
   console.log(
-    `\n${formatting.green(
-      "Oazo config files generated! 🫒"
-    )} \n${formatting.green(`Time: ${Date.now() - generatingTimeStart}ms`)}\n`
+    `\n${formatting.green("Config files generated! 🫒")} \n${formatting.green(
+      `Time: ${Date.now() - generatingTimeStart}ms`
+    )}\n`
   );
 }
