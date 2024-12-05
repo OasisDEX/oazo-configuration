@@ -29,6 +29,7 @@ export const getFleetConfig: GetFleetConfig = () => ({
   [NetworkIds.OPTIMISMMAINNET]: emptyConfig,
   [NetworkIds.ARBITRUMMAINNET]: emptyConfig,
   [NetworkIds.BASEMAINNET]: {
+    ...emptyConfig,
     "0x2653014cd3ad332a98b0a80ccf12473740df81c2": {
       name: "Earn McYieldFace USDC",
       slug: "earn-mcyieldface-usdc",
