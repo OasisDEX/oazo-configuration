@@ -1,20 +1,33 @@
 import { NetworkIds, Risk } from "🤝";
 
-type GetFleetConfig = () => {
-  [networkId in NetworkIds]: {
-    [contractAddress: `0x${string}`]: {
-      name: string;
-      slug: string;
-      bestFor: string;
-      risk: Risk;
-    };
+type FleetConfig = {
+  [contractAddress: `0x${string}`]: {
+    name: string;
+    slug: string;
+    bestFor: string;
+    risk: Risk;
   };
 };
 
+type GetFleetConfig = () => {
+  [networkId in NetworkIds]: FleetConfig;
+};
+
+const emptyConfig: FleetConfig = {
+  // just for the (later) type safety - so everything has the same
+  // type and is defined dont actually use "0x" key please
+  "0x": {
+    name: "",
+    slug: "",
+    bestFor: "",
+    risk: "low",
+  },
+};
+
 export const getFleetConfig: GetFleetConfig = () => ({
-  [NetworkIds.MAINNET]: {},
-  [NetworkIds.OPTIMISMMAINNET]: {},
-  [NetworkIds.ARBITRUMMAINNET]: {},
+  [NetworkIds.MAINNET]: emptyConfig,
+  [NetworkIds.OPTIMISMMAINNET]: emptyConfig,
+  [NetworkIds.ARBITRUMMAINNET]: emptyConfig,
   [NetworkIds.BASEMAINNET]: {
     "0x2653014cd3ad332a98b0a80ccf12473740df81c2": {
       name: "Earn McYieldFace USDC",
