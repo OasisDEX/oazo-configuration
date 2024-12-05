@@ -25,10 +25,10 @@ const emptyConfig: FleetConfig = {
 };
 
 export const getFleetConfig: GetFleetConfig = () => ({
+  // FLEET ADDRESS SHOULD BE ALL LOWERCASE (unlike this comment)
   [NetworkIds.MAINNET]: emptyConfig,
   [NetworkIds.OPTIMISMMAINNET]: emptyConfig,
-  [NetworkIds.ARBITRUMMAINNET]: emptyConfig,
-  [NetworkIds.BASEMAINNET]: {
+  [NetworkIds.ARBITRUMMAINNET]: {
     ...emptyConfig,
     "0x2653014cd3ad332a98b0a80ccf12473740df81c2": {
       name: "Earn McYieldFace USDC",
@@ -36,6 +36,9 @@ export const getFleetConfig: GetFleetConfig = () => ({
       bestFor: "Chill earning",
       risk: "low",
     },
+  },
+  [NetworkIds.BASEMAINNET]: {
+    ...emptyConfig,
     "0xeb201f4915b6cbff5a01abd866fe6c6a026f224d": {
       name: "USDC Ya Later",
       slug: "usdc-ya-later",
