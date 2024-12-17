@@ -5,6 +5,7 @@
 export enum TokenSymbol {
   ETH = 'ETH', // Ethereum
   WETH = 'WETH', // Wrapped Ethereum
+  WEETH = 'WEETH', // Wrapped Ethereum
   STETH = 'STETH', // stakedETH
   WSTETH = 'WSTETH', // Wrapped stakedETH
   WBTC = 'WBTC', // Wrapped Bitcoin
@@ -13,6 +14,7 @@ export enum TokenSymbol {
   USDCE = 'USDCE', // USD Coin (Bridged)
   DAI = 'DAI', // Dai Stablecoin
   CBETH = 'CBETH', // Compound ETH (assuming, provide accurate description if different)
+  CBBTC = 'CBBTC', // Coinbase BTC
   RETH = 'RETH', // Rocket Pool ETH
   AAVE = 'AAVE',
   LINK = 'LINK',
