@@ -41,6 +41,7 @@ export class Token implements IToken {
 
 const ETH = new Token(TokenSymbol.ETH, 18);
 const WETH = new Token(TokenSymbol.WETH, 18);
+const WEETH = new Token(TokenSymbol.WEETH, 18);
 const STETH = new Token(TokenSymbol.STETH, 18);
 const WSTETH = new Token(TokenSymbol.WSTETH, 18);
 const WBTC = new Token(TokenSymbol.WBTC, 8);
@@ -49,6 +50,7 @@ const USDBC = new Token(TokenSymbol.USDBC, 6);
 const USDCE = new Token(TokenSymbol.USDCE, 6);
 const DAI = new Token(TokenSymbol.DAI, 18);
 const CBETH = new Token(TokenSymbol.CBETH, 18);
+const CBBTC = new Token(TokenSymbol.CBBTC, 18);
 const RETH = new Token(TokenSymbol.RETH, 18);
 const AAVE = new Token(TokenSymbol.AAVE, 18);
 const LINK = new Token(TokenSymbol.LINK, 18);
@@ -115,6 +117,7 @@ export type TokenByTokenSymbol = {
 export const tokenByTokenSymbol: TokenByTokenSymbol = {
   ETH,
   WETH,
+  WEETH,
   STETH,
   WSTETH,
   WBTC,
@@ -123,6 +126,7 @@ export const tokenByTokenSymbol: TokenByTokenSymbol = {
   USDCE,
   DAI,
   CBETH,
+  CBBTC,
   RETH,
   AAVE,
   LINK,
