@@ -22,7 +22,7 @@ const emptyConfig: FleetConfig = {
     name: "",
     slug: "",
     bestFor: "",
-    risk: "low",
+    risk: "lower",
   },
 };
 
@@ -37,7 +37,7 @@ export const getFleetConfig: GetFleetConfig = () => ({
       name: "Earn McYieldFace USDC",
       slug: "earn-mcyieldface-usdc",
       bestFor: "Chill earning",
-      risk: "low",
+      risk: "lower",
     },
   },
   [NetworkIds.BASEMAINNET]: {
@@ -47,7 +47,7 @@ export const getFleetConfig: GetFleetConfig = () => ({
       name: "USDC Ya Later",
       slug: "usdc-ya-later",
       bestFor: "Earning while asleep",
-      risk: "high",
+      risk: "higher",
     },
   },
 });
