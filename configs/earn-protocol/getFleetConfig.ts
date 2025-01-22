@@ -28,7 +28,30 @@ const emptyConfig: FleetConfig = {
 
 export const getFleetConfig: GetFleetConfig = () => ({
   // FLEET ADDRESS SHOULD BE ALL LOWERCASE (unlike this comment)
-  [NetworkIds.MAINNET]: emptyConfig,
+  [NetworkIds.MAINNET]: {
+    ...emptyConfig,
+    "0x5c442ea2a29c0a595f017e1b2bead568d9aa77da": {
+      address: "0x5c442ea2a29c0a595f017e1b2bead568d9aa77da",
+      name: "Mainnet USDC",
+      slug: "mainnet-usdc",
+      bestFor: "Chill earning",
+      risk: "lower",
+    },
+    "0x8faf711962e89047cb26fb4b4f8dbd578069db53": {
+      address: "0x8faf711962e89047cb26fb4b4f8dbd578069db53",
+      name: "Mainnet USDT",
+      slug: "mainnet-usdt",
+      bestFor: "Chill earning",
+      risk: "lower",
+    },
+    "0x125c8d2e0fb1d68cbe27a9ba0b1f2841cbf313da": {
+      address: "0x125c8d2e0fb1d68cbe27a9ba0b1f2841cbf313da",
+      name: "Mainnet WETH",
+      slug: "mainnet-weth",
+      bestFor: "Chill earning",
+      risk: "lower",
+    },
+  },
   [NetworkIds.OPTIMISMMAINNET]: emptyConfig,
   [NetworkIds.ARBITRUMMAINNET]: {
     ...emptyConfig,
