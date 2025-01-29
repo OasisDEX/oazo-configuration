@@ -12,7 +12,7 @@ export const getParameters = ({
     message: "Oasis.app is now Summer.fi! Read the announcement",
   },
   announcement: {
-    enabled: true,
+    enabled: false,
     message:
       "$SUMR token is now live and claimable. Claim yours now from lazy.summer.fi. More Info",
     url: "https://lazy.summer.fi/earn/sumr",
