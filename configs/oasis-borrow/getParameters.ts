@@ -14,8 +14,8 @@ export const getParameters = ({
   announcement: {
     enabled: true,
     message:
-      "$MORPHO is now claimable. Claim now from your Summer.fi position. More info",
-    url: "https://x.com/summerfinance_/status/1859549734219686226",
+      "$SUMR token is now live and claimable. Claim yours now from lazy.summer.fi. More Info",
+    url: "https://lazy.summer.fi/earn/sumr",
     icon: "morpho_circle_color",
   },
   locationBanner: {
