@@ -16,7 +16,7 @@ export const getParameters = ({
     message:
       "$SUMR token is now live and claimable. Claim yours now from lazy.summer.fi. More Info",
     url: "https://lazy.summer.fi/earn/sumr",
-    icon: "morpho_circle_color",
+    icon: "summer_light",
   },
   locationBanner: {
     GB: {
