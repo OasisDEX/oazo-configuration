@@ -14,8 +14,8 @@ export const getParameters = ({
   announcement: {
     enabled: true,
     message:
-      "$SUMR token is now live and claimable. Claim yours now from lazy.summer.fi. More Info",
-    url: "https://lazy.summer.fi/earn/sumr",
+      "The Lazy Summer Protocol is now live! Get effortless access to DeFi's highest quality yields. Try it now",
+    url: "https://summer.fi/",
     icon: "summer_light",
   },
   locationBanner: {
