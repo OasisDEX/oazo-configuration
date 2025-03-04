@@ -1,7 +1,7 @@
 import { ConfigHelperType } from "⌨️";
+import { getFeatures } from "./getFeatures";
 import { getFleetConfig } from "./getFleetConfig";
 import { getLinks } from "./getLinks";
-import { getFeatures } from "./getFeatures";
 
 export default function (params: ConfigHelperType) {
   return {
