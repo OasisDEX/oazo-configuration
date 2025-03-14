@@ -5,5 +5,5 @@ export const getFeatures = ({
   isDevelopment,
 }: ConfigHelperType) => ({
   Migrations: isStaging || isDevelopment,
-  Send: isStaging || isDevelopment,
+  Send: true,
 });
