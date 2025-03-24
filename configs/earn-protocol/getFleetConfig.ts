@@ -1,16 +1,18 @@
+import { ConfigHelperType } from "⌨️";
 import { NetworkIds, Risk } from "🤝";
 
 type FleetConfig = {
   [contractAddress: `0x${string}`]: {
     address: `0x${string}` | "";
-    name: string;
-    slug: string;
-    bestFor: string;
-    risk: Risk;
+    name?: string;
+    slug?: string;
+    bestFor?: string;
+    risk?: Risk;
+    disabled?: boolean;
   };
 };
 
-type GetFleetConfig = () => {
+type GetFleetConfig = (params: ConfigHelperType) => {
   [networkId in NetworkIds]: FleetConfig;
 };
 
@@ -23,54 +25,39 @@ const emptyConfig: FleetConfig = {
     slug: "",
     bestFor: "",
     risk: "lower",
+    disabled: false,
   },
 };
 
-export const getFleetConfig: GetFleetConfig = () => ({
+const disableVault = (address: string, flag: boolean) =>
+  flag
+    ? {
+        ...{
+          [address]: {
+            address,
+            disabled: true,
+          },
+        },
+      }
+    : {};
+
+export const getFleetConfig: GetFleetConfig = ({ isProduction }) => ({
   // FLEET ADDRESS SHOULD BE ALL LOWERCASE (unlike this comment)
   [NetworkIds.MAINNET]: {
     ...emptyConfig,
-    "0x5c442ea2a29c0a595f017e1b2bead568d9aa77da": {
-      address: "0x5c442ea2a29c0a595f017e1b2bead568d9aa77da",
-      name: "Mainnet USDC",
-      slug: "mainnet-usdc",
-      bestFor: "Chill earning",
-      risk: "lower",
-    },
-    "0x8faf711962e89047cb26fb4b4f8dbd578069db53": {
-      address: "0x8faf711962e89047cb26fb4b4f8dbd578069db53",
-      name: "Mainnet USDT",
-      slug: "mainnet-usdt",
-      bestFor: "Chill earning",
-      risk: "lower",
-    },
-    "0x125c8d2e0fb1d68cbe27a9ba0b1f2841cbf313da": {
-      address: "0x125c8d2e0fb1d68cbe27a9ba0b1f2841cbf313da",
-      name: "Mainnet WETH",
-      slug: "mainnet-weth",
-      bestFor: "Chill earning",
-      risk: "lower",
-    },
   },
-  [NetworkIds.OPTIMISMMAINNET]: emptyConfig,
+  [NetworkIds.OPTIMISMMAINNET]: {
+    ...emptyConfig,
+  },
   [NetworkIds.ARBITRUMMAINNET]: {
     ...emptyConfig,
-    "0x2653014cd3ad332a98b0a80ccf12473740df81c2": {
-      address: "0x2653014cd3ad332a98b0a80ccf12473740df81c2",
-      name: "Earn McYieldFace USDC",
-      slug: "earn-mcyieldface-usdc",
-      bestFor: "Chill earning",
-      risk: "lower",
-    },
   },
   [NetworkIds.BASEMAINNET]: {
     ...emptyConfig,
-    "0xeb201f4915b6cbff5a01abd866fe6c6a026f224d": {
-      address: "0xeb201f4915b6cbff5a01abd866fe6c6a026f224d",
-      name: "USDC Ya Later",
-      slug: "usdc-ya-later",
-      bestFor: "Earning while asleep",
-      risk: "higher",
-    },
+    ...disableVault("0x64db8f51f1bf7064bb5a361a7265f602d348e0f0", isProduction),
+  },
+  [NetworkIds.SONIC]: {
+    ...emptyConfig,
+    ...disableVault("0x8b8235f12f03c34d9cb064460e234cc2c9a12922", isProduction),
   },
 });

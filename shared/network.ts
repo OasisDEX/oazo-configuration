@@ -9,6 +9,7 @@ export enum Network {
   OPTIMISM = "optimism", // Optimism Layer 2 Mainnet
   ARBITRUM = "arbitrum", // Arbitrum Layer 2 Mainnet
   BASE = "base", // Base Layer 2 Mainnet (Coinbase)
+  SONIC = "sonic",
 }
 
 export enum NetworkIds {
@@ -16,4 +17,5 @@ export enum NetworkIds {
   ARBITRUMMAINNET = 42161,
   OPTIMISMMAINNET = 10,
   BASEMAINNET = 8453,
+  SONIC = 146,
 }
