@@ -54,7 +54,6 @@ export const getFleetConfig: GetFleetConfig = ({ isProduction }) => ({
   },
   [NetworkIds.BASEMAINNET]: {
     ...emptyConfig,
-    ...disableVault("0x64db8f51f1bf7064bb5a361a7265f602d348e0f0", isProduction),
   },
   [NetworkIds.SONIC]: {
     ...emptyConfig,
