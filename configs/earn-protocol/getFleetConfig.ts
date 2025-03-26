@@ -9,6 +9,12 @@ type FleetConfig = {
     bestFor?: string;
     risk?: Risk;
     disabled?: boolean;
+    bonus?: {
+      multiplier: number;
+      label: string;
+      icon: string;
+      description: string;
+    };
   };
 };
 
@@ -26,23 +32,26 @@ const emptyConfig: FleetConfig = {
     bestFor: "",
     risk: "lower",
     disabled: false,
+    bonus: {
+      multiplier: 0,
+      label: "",
+      icon: "",
+      description: "",
+    },
   },
 };
 
-const disableVault = (address: string, flag: boolean) =>
-  flag
-    ? {
-        ...{
-          [address]: {
-            address,
-            disabled: true,
-          },
-        },
-      }
-    : {};
+const vaultConfig: (props: FleetConfig[`0x${string}`]) => FleetConfig = (
+  props
+) => ({
+  [props.address.toLowerCase()]: {
+    ...props,
+    address: props.address.toLowerCase() as `0x${string}`,
+  },
+});
 
 export const getFleetConfig: GetFleetConfig = ({ isProduction }) => ({
-  // FLEET ADDRESS SHOULD BE ALL LOWERCASE (unlike this comment)
+  // FLEET ADDRESS SHOULD BE ALL LOWERCASE ('vaultConfig' takes care of it)
   [NetworkIds.MAINNET]: {
     ...emptyConfig,
   },
@@ -57,7 +66,15 @@ export const getFleetConfig: GetFleetConfig = ({ isProduction }) => ({
   },
   [NetworkIds.SONIC]: {
     ...emptyConfig,
-    ...disableVault("0x8b8235f12f03c34d9cb064460e234cc2c9a12922", isProduction),
-    ...disableVault("0x507a2d9e87dbd3076e65992049c41270b47964f8", isProduction),
+    ...vaultConfig({
+      address: "0x507a2d9e87dbd3076e65992049c41270b47964f8",
+      bonus: {
+        multiplier: 12,
+        label: "Sonic Points",
+        icon: "earn_network_sonic",
+        description: "This position is eligible for 12x Sonic points.",
+      },
+      disabled: isProduction,
+    }),
   },
 });
