@@ -1,9 +1,9 @@
 import { ConfigHelperType } from "⌨️";
 
 export const getFeatures = ({
-  isStaging,
-  isDevelopment,
+  isStaging: _isStaging,
+  isDevelopment: _isDevelopment,
 }: ConfigHelperType) => ({
-  Migrations: isStaging || isDevelopment,
+  Migrations: true,
   Send: true,
 });
