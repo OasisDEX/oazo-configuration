@@ -50,9 +50,7 @@ const vaultConfig: (props: FleetConfig[`0x${string}`]) => FleetConfig = (
   },
 });
 
-export const getFleetConfig: GetFleetConfig = ({
-  isProduction: _isProduction,
-}) => ({
+export const getFleetConfig: GetFleetConfig = ({ isProduction }) => ({
   // FLEET ADDRESS SHOULD BE ALL LOWERCASE ('vaultConfig' takes care of it)
   [NetworkIds.MAINNET]: {
     ...emptyConfig,
@@ -76,6 +74,7 @@ export const getFleetConfig: GetFleetConfig = ({
         icon: "earn_network_sonic",
         description: "This position is eligible for 12x Sonic points.",
       },
+      disabled: isProduction,
     }),
   },
 });
