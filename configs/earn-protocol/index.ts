@@ -10,6 +10,6 @@ export default function (params: ConfigHelperType) {
     features: getFeatures(params),
     maintenance: false,
     bannerMessage:
-      "We are aware of an issue with APY values showing 0% and working on a fix.",
+      "We are aware of an issues with APY values showing 0% and slow loading. We're working on a fix.",
   };
 }
