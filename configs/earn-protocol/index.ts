@@ -9,7 +9,6 @@ export default function (params: ConfigHelperType) {
     fleetMap: getFleetConfig(params),
     features: getFeatures(params),
     maintenance: false,
-    bannerMessage:
-      "We are aware of an issues with APY values showing 0% and slow loading. We're working on a fix.",
+    bannerMessage: "",
   };
 }
