@@ -8,7 +8,7 @@ export default function (params: ConfigHelperType) {
     links: getLinks(params),
     fleetMap: getFleetConfig(params),
     features: getFeatures(params),
-    maintenance: params.isProduction,
+    maintenance: false,
     bannerMessage:
       "We are aware of an issue with APY values showing 0% and working on a fix.",
   };
