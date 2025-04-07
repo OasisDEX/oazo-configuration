@@ -8,6 +8,6 @@ export default function (params: ConfigHelperType) {
     links: getLinks(params),
     fleetMap: getFleetConfig(params),
     features: getFeatures(params),
-    maintenance: false,
+    maintenance: params.isProduction,
   };
 }
