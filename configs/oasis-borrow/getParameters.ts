@@ -17,10 +17,8 @@ export const getParameters = ({
       "The Lazy Summer Protocol is now live! Get effortless access to DeFi's highest quality yields",
     url: "https://summer.fi/",
     actionLabel: "Try it now",
-    btn: {
-      background: "linear-gradient(90deg, #FF49A4 0%, #B049FF 93%)",
-      color: "white",
-    },
+    btnBackground: "linear-gradient(90deg, #FF49A4 0%, #B049FF 93%)",
+    btnColor: "white",
     icon: "summer_light",
   },
   locationBanner: {
