@@ -19,7 +19,10 @@ export const getParameters = ({
     actionLabel: "Try it now",
     btnBackground: "linear-gradient(90deg, #FF49A4 0%, #B049FF 93%)",
     btnColor: "white",
-    icon: "summer_light",
+    icon: "lazy_summer_small_logo",
+    iconBackground:
+      "linear-gradient(90deg, rgba(255, 73, 164, 0.2) 0%, rgba(176, 73, 255, 0.2) 93%)",
+    iconSize: 16,
   },
   locationBanner: {
     GB: {
