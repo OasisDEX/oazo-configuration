@@ -16,6 +16,7 @@ export const getParameters = ({
     message:
       "The Lazy Summer Protocol is now live! Get effortless access to DeFi's highest quality yields. Try it now",
     url: "https://summer.fi/",
+    actionLabel: "Try it now",
     icon: "summer_light",
   },
   locationBanner: {
