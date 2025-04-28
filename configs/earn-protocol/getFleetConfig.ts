@@ -56,6 +56,10 @@ export const getFleetConfig: GetFleetConfig = ({
   // FLEET ADDRESS SHOULD BE ALL LOWERCASE ('vaultConfig' takes care of it)
   [NetworkIds.MAINNET]: {
     ...emptyConfig,
+    ...vaultConfig({
+      address: "0x2e6abcbcced9af05bc3b8a4908e0c98c29a88e10",
+      risk: "higher",
+    }),
   },
   [NetworkIds.OPTIMISMMAINNET]: {
     ...emptyConfig,
