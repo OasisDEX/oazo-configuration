@@ -59,6 +59,7 @@ export const getFleetConfig: GetFleetConfig = ({
     ...vaultConfig({
       address: "0x2e6abcbcced9af05bc3b8a4908e0c98c29a88e10",
       risk: "higher",
+      bestFor: "More aggressive strategies",
     }),
   },
   [NetworkIds.OPTIMISMMAINNET]: {
