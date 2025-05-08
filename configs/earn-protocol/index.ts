@@ -9,6 +9,7 @@ export default function (params: ConfigHelperType) {
     fleetMap: getFleetConfig(params),
     features: getFeatures(params),
     maintenance: false,
-    bannerMessage: "",
+    bannerMessage:
+      "We're currently deploying an update to the app. Some features may be temporarily unavailable. Please check back in 10 minutes if you encounter any issues. Thank you for your patience!",
   };
 }
