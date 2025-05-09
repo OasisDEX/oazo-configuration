@@ -8,5 +8,5 @@ export const getFeatures = ({
   Migrations: true,
   Send: true,
   FilterZeroTokenVaults: isProduction, // filter out zero token vaults on production
-  VaultSwitching: !isProduction, // enable vault switching on staging and development
+  VaultSwitching: true,
 });
