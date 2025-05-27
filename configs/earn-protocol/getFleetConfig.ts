@@ -57,7 +57,12 @@ export const getFleetConfig: GetFleetConfig = ({
   [NetworkIds.MAINNET]: {
     ...emptyConfig,
     ...vaultConfig({
-      address: "0x2e6abcbcced9af05bc3b8a4908e0c98c29a88e10",
+      address: "0x2e6abcbcced9af05bc3b8a4908e0c98c29a88e10", // ETH
+      risk: "higher",
+      bestFor: "More aggressive strategies",
+    }),
+    ...vaultConfig({
+      address: "0xe9cda459bed6dcfb8ac61cd8ce08e2d52370cb06", // USDC
       risk: "higher",
       bestFor: "More aggressive strategies",
     }),
