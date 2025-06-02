@@ -51,7 +51,7 @@ const vaultConfig: (props: FleetConfig[`0x${string}`]) => FleetConfig = (
 });
 
 export const getFleetConfig: GetFleetConfig = ({
-  isProduction,
+  isProduction: _isProduction,
 }) => ({
   // FLEET ADDRESS SHOULD BE ALL LOWERCASE ('vaultConfig' takes care of it)
   [NetworkIds.MAINNET]: {
@@ -65,7 +65,6 @@ export const getFleetConfig: GetFleetConfig = ({
       address: "0xe9cda459bed6dcfb8ac61cd8ce08e2d52370cb06", // USDC
       risk: "higher",
       bestFor: "More aggressive strategies",
-      disabled: isProduction,
     }),
   },
   [NetworkIds.OPTIMISMMAINNET]: {
