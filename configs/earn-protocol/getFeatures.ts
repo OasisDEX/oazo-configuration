@@ -11,4 +11,5 @@ export const getFeatures = ({
   VaultSwitching: true,
   BeachClub: isStaging || isDevelopment,
   Institutions: isStaging || isDevelopment,
+  AdrollPixelScript: !isProduction,
 });
