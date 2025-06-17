@@ -9,7 +9,7 @@ export const getFeatures = ({
   Send: true,
   FilterZeroTokenVaults: isProduction, // filter out zero token vaults on production
   VaultSwitching: true,
-  BeachClub: isStaging || isDevelopment,
+  BeachClub: true,
   Institutions: isStaging || isDevelopment,
   AdrollPixelScript: !isProduction,
 });
