@@ -1,9 +1,6 @@
 import { ConfigHelperType } from "⌨️";
 
-export const getFeatures = ({
-  notProduction,
-  isProduction,
-}: ConfigHelperType) => ({
+export const getFeatures = ({ notProduction }: ConfigHelperType) => ({
   AaveV3ArbitrumBorrow: true,
   AaveV3ArbitrumEarn: false,
   AaveV3EarncbETHeth: false,
@@ -109,6 +106,6 @@ export const getFeatures = ({
       trailingStopLoss: true,
     },
   },
-  Rays: isProduction ? true : false,
-  RaysDailyChallenge: isProduction ? true : false,
+  Rays: false,
+  RaysDailyChallenge: false,
 });
