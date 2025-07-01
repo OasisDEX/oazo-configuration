@@ -12,4 +12,5 @@ export const getFeatures = ({
   BeachClub: true,
   Institutions: isStaging || isDevelopment,
   AdrollPixelScript: !isProduction,
+  Game: !isProduction,
 });
