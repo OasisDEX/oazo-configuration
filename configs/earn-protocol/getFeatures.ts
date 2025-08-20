@@ -10,7 +10,7 @@ export const getFeatures = ({
   FilterZeroTokenVaults: isProduction, // filter out zero token vaults on production
   VaultSwitching: true,
   BeachClub: true,
-  Institutions: isStaging || isDevelopment,
+  Institutions: true,
   Team: isStaging || isDevelopment,
   AdrollPixelScript: !isProduction,
   Game: true,
