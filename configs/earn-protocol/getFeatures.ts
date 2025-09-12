@@ -9,5 +9,6 @@ export const getFeatures = ({ isProduction }: ConfigHelperType) => ({
   Institutions: true,
   Team: true,
   AdrollPixelScript: !isProduction,
+  SuperLazyVaults: !isProduction,
   Game: true,
 });
