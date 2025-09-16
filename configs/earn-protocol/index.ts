@@ -2,6 +2,7 @@ import { ConfigHelperType } from "⌨️";
 import { getFeatures } from "./getFeatures";
 import { getFleetConfig } from "./getFleetConfig";
 import { getLinks } from "./getLinks";
+import { getTosWhitelist } from "./getTosWhitelist";
 
 export default function (params: ConfigHelperType) {
   return {
@@ -11,5 +12,6 @@ export default function (params: ConfigHelperType) {
     maintenance: false,
     bannerMessage: "",
     deployment: params,
+    tosWhitelist: getTosWhitelist(),
   };
 }
