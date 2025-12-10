@@ -11,5 +11,5 @@ export const getFeatures = ({ isProduction }: ConfigHelperType) => ({
   AdrollPixelScript: !isProduction,
   SuperLazyVaults: !isProduction,
   Game: true,
-  StakingV2: !isProduction,
+  StakingV2: true,
 });
