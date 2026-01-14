@@ -4,26 +4,49 @@ import { LendingProtocol, Network, TokenSymbol } from "🤝";
 export const getParameters = ({
   notProduction,
 }: Pick<ConfigHelperType, "notProduction">) => ({
-  topBanner: {
-    enabled: false,
-    closeable: true,
-    name: "rebranding",
-    url: "https://blog.summer.fi/oasis-app-rebrands-to-summer-fi/",
-    message: "Oasis.app is now Summer.fi! Read the announcement",
-  },
-  announcement: {
-    enabled: true,
-    message:
-      "The Lazy Summer Protocol is now live! Get effortless access to DeFi's highest quality yields",
-    url: "https://summer.fi/",
-    actionLabel: "Try it now",
-    btnBackground: "linear-gradient(90deg, #FF49A4 0%, #B049FF 93%)",
-    btnColor: "white",
-    icon: "lazy_summer_small_logo",
-    iconBackground:
-      "linear-gradient(90deg, rgba(255, 73, 164, 0.2) 0%, rgba(176, 73, 255, 0.2) 93%)",
-    iconSize: 16,
-  },
+  topBanner: notProduction
+    ? {
+        enabled: false,
+        closeable: true,
+        name: "transitioning",
+        url: "#",
+        message:
+          "Summer.fi Pro is transitioning to DeFi Saver on February 12, 2026. After this date, all position management will occur through the DeFi Saver app.",
+      }
+    : {
+        enabled: false,
+        closeable: true,
+        name: "rebranding",
+        url: "https://blog.summer.fi/oasis-app-rebrands-to-summer-fi/",
+        message: "Oasis.app is now Summer.fi! Read the announcement",
+      },
+  announcement: notProduction
+    ? {
+        enabled: true,
+        message:
+          "Summer.fi Pro is transitioning to DeFi Saver on February 12, 2026. After this date, all position management will occur through the DeFi Saver app.",
+        url: "#",
+        actionLabel: "Read more",
+        btnBackground: "linear-gradient(90deg, #FF49A4 0%, #B049FF 93%)",
+        btnColor: "white",
+        icon: "lazy_summer_small_logo",
+        iconBackground:
+          "linear-gradient(90deg, rgba(255, 73, 164, 0.2) 0%, rgba(176, 73, 255, 0.2) 93%)",
+        iconSize: 16,
+      }
+    : {
+        enabled: true,
+        message:
+          "The Lazy Summer Protocol is now live! Get effortless access to DeFi's highest quality yields",
+        url: "https://summer.fi/",
+        actionLabel: "Try it now",
+        btnBackground: "linear-gradient(90deg, #FF49A4 0%, #B049FF 93%)",
+        btnColor: "white",
+        icon: "lazy_summer_small_logo",
+        iconBackground:
+          "linear-gradient(90deg, rgba(255, 73, 164, 0.2) 0%, rgba(176, 73, 255, 0.2) 93%)",
+        iconSize: 16,
+      },
   locationBanner: {
     GB: {
       enabled: true,
