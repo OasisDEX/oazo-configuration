@@ -10,6 +10,7 @@ export enum Network {
   ARBITRUM = "arbitrum", // Arbitrum Layer 2 Mainnet
   BASE = "base", // Base Layer 2 Mainnet (Coinbase)
   SONIC = "sonic",
+  HYPERLIQUID = "hyperliquid",
 }
 
 export enum NetworkIds {
@@ -18,4 +19,5 @@ export enum NetworkIds {
   OPTIMISMMAINNET = 10,
   BASEMAINNET = 8453,
   SONIC = 146,
+  HYPERLIQUID = 999,
 }

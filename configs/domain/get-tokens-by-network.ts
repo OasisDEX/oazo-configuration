@@ -3,14 +3,14 @@ import {
   ADDRESS_ZERO,
   Common,
   SystemKeys,
-} from '@oasisdex/addresses';
+} from "@oasisdex/addresses";
 import {
   IToken,
   Network,
   TokenByTokenSymbol,
   TokenSymbol,
   tokenByTokenSymbol,
-} from '🤝';
+} from "🤝";
 
 type TokenSubset = {
   [key in TokenSymbol]?: IToken;
@@ -39,6 +39,8 @@ export const getTokensByNetwork = (): NetworkTokens => {
       ...generateEntries(tokenByTokenSymbol, arbitrumCommon),
     ],
     [Network.BASE]: [...generateEntries(tokenByTokenSymbol, baseCommon)],
+    [Network.SONIC]: [],
+    [Network.HYPERLIQUID]: [],
   };
 };
 
@@ -51,8 +53,8 @@ function generateEntries(
   for (const tokenSymbol in tokenByTokenSymbol) {
     // We're forcing the type here because we know that the tokenSymbol is (or should be) a key of Tokens
     let address;
-    if (tokenSymbol === 'USDCE') {
-      address = networkCommonAddresses['USDC.E'];
+    if (tokenSymbol === "USDCE") {
+      address = networkCommonAddresses["USDC.E"];
     } else {
       address =
         networkCommonAddresses[
@@ -62,7 +64,7 @@ function generateEntries(
 
     // Check if the address is neither ZERO_ADDRESS nor an empty string.
     // Also in case there's no overlap between tokenSymbols and networkCommonAddresses ignore the tokenSymbol
-    if (address && address !== '' && address !== ADDRESS_ZERO) {
+    if (address && address !== "" && address !== ADDRESS_ZERO) {
       const tokenObject = {
         [tokenSymbol]: tokenByTokenSymbol[tokenSymbol as TokenSymbol]
           .setAddress(address)

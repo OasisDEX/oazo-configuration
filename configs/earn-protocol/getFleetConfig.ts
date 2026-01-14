@@ -91,4 +91,25 @@ export const getFleetConfig: GetFleetConfig = ({
       },
     }),
   },
+  [NetworkIds.HYPERLIQUID]: {
+    ...emptyConfig,
+    ...vaultConfig({
+      address: "0x26ce19153db119bdf2bcf299503f7d419d4a6d4f", // USDT0
+      bonus: {
+        multiplier: 0,
+        description: "Hyperlend, Hyperbeat and Felix",
+        icon: "stars",
+        label: "Earn points across protocols",
+      },
+    }),
+    ...vaultConfig({
+      address: "0x015e60a0b239214fdeab9ad21318b12c0d97c15d", // USDC
+      bonus: {
+        multiplier: 0,
+        description: "Hyperlend, Hyperbeat and Felix",
+        icon: "stars",
+        label: "Earn points across protocols",
+      },
+    }),
+  },
 });
