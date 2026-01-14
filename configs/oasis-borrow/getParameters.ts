@@ -11,7 +11,7 @@ export const getParameters = ({
         name: "transitioning",
         url: "http://blog.summer.fi/summer-fi-goes-all-in-on-the-lazy-summer-protocol-as-summer-pro-transitions-to-defi-saver/",
         message:
-          "Summer.fi Pro is transitioning to DeFi Saver on February 12, 2026. After this date, all position management will occur through the DeFi Saver app.",
+          "Summer.fi Pro is transitioning to DeFi Saver on February 12, 2026. After this date, all position management will occur through the DeFi Saver app. Read more.",
       }
     : {
         enabled: false,
