@@ -6,7 +6,7 @@ export const getParameters = ({
 }: Pick<ConfigHelperType, "notProduction">) => ({
   topBanner: notProduction
     ? {
-        enabled: false,
+        enabled: true,
         closeable: true,
         name: "transitioning",
         url: "http://blog.summer.fi/summer-fi-goes-all-in-on-the-lazy-summer-protocol-as-summer-pro-transitions-to-defi-saver/",
