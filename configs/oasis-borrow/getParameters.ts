@@ -7,7 +7,7 @@ export const getParameters = ({
   topBanner: notProduction
     ? {
         enabled: true,
-        closeable: true,
+        closeable: false,
         name: "transitioning",
         url: "http://blog.summer.fi/summer-fi-goes-all-in-on-the-lazy-summer-protocol-as-summer-pro-transitions-to-defi-saver/",
         message:
