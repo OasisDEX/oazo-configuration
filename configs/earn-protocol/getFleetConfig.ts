@@ -115,7 +115,7 @@ export const getFleetConfig: GetFleetConfig = ({ isProduction }) => ({
     ...vaultConfig({
       // prod summer
       disabled: isProduction,
-      address: "0x252e5aa42c1804b85b2ce6712cd418a0561232ba", // USDT0
+      address: "0x2cc190fb654141dfbeac4c0f718f4d511674d346", // USDT0
       bonus: {
         multiplier: 0,
         description: "Hyperlend, Hyperbeat and Felix",
@@ -126,7 +126,7 @@ export const getFleetConfig: GetFleetConfig = ({ isProduction }) => ({
     ...vaultConfig({
       // prod summer
       disabled: isProduction,
-      address: "0x2cc190fb654141dfbeac4c0f718f4d511674d346", // USDC
+      address: "0x252e5aa42c1804b85b2ce6712cd418a0561232ba", // USDC
       bonus: {
         multiplier: 0,
         description: "Hyperlend, Hyperbeat and Felix",
