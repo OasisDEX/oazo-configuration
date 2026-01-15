@@ -50,9 +50,7 @@ const vaultConfig: (props: FleetConfig[`0x${string}`]) => FleetConfig = (
   },
 });
 
-export const getFleetConfig: GetFleetConfig = ({
-  isProduction: _isProduction,
-}) => ({
+export const getFleetConfig: GetFleetConfig = ({ isProduction }) => ({
   // FLEET ADDRESS SHOULD BE ALL LOWERCASE ('vaultConfig' takes care of it)
   [NetworkIds.MAINNET]: {
     ...emptyConfig,
@@ -94,6 +92,7 @@ export const getFleetConfig: GetFleetConfig = ({
   [NetworkIds.HYPERLIQUID]: {
     ...emptyConfig,
     ...vaultConfig({
+      // bummer
       address: "0x26ce19153db119bdf2bcf299503f7d419d4a6d4f", // USDT0
       bonus: {
         multiplier: 0,
@@ -103,7 +102,31 @@ export const getFleetConfig: GetFleetConfig = ({
       },
     }),
     ...vaultConfig({
+      // bummer
+      disabled: isProduction,
       address: "0x015e60a0b239214fdeab9ad21318b12c0d97c15d", // USDC
+      bonus: {
+        multiplier: 0,
+        description: "Hyperlend, Hyperbeat and Felix",
+        icon: "stars",
+        label: "Earn points across protocols",
+      },
+    }),
+    ...vaultConfig({
+      // prod summer
+      disabled: isProduction,
+      address: "0x252e5aa42c1804b85b2ce6712cd418a0561232ba", // USDT0
+      bonus: {
+        multiplier: 0,
+        description: "Hyperlend, Hyperbeat and Felix",
+        icon: "stars",
+        label: "Earn points across protocols",
+      },
+    }),
+    ...vaultConfig({
+      // prod summer
+      disabled: isProduction,
+      address: "0x2cc190fb654141dfbeac4c0f718f4d511674d346", // USDC
       bonus: {
         multiplier: 0,
         description: "Hyperlend, Hyperbeat and Felix",
