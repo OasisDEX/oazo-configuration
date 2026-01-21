@@ -13,5 +13,5 @@ export const getFeatures = ({ isProduction }: ConfigHelperType) => ({
   Game: true,
   StakingV2: true,
   UseSumrCoingeckoPrice: !isProduction,
-  SumrCoingeckoTokenID: isProduction ? "summer-2" : "stp-network", // checking if everything works fine with other token on dev
+  SumrCoingeckoTokenID: "stp-network", // checking if everything works fine with other token on prod
 });
