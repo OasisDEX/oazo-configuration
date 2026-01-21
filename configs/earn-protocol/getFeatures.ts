@@ -13,4 +13,5 @@ export const getFeatures = ({ isProduction }: ConfigHelperType) => ({
   Game: true,
   StakingV2: true,
   UseSumrCoingeckoPrice: !isProduction,
+  SumrCoingeckoTokenID: "summer-2",
 });
