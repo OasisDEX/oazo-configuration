@@ -12,6 +12,6 @@ export const getFeatures = ({ isProduction }: ConfigHelperType) => ({
   SuperLazyVaults: !isProduction,
   Game: true,
   StakingV2: true,
-  UseSumrCoingeckoPrice: true,
-  SumrCoingeckoTokenID: "summer-2", // checking if everything works fine with other token on prod
+  UseSumrCoingeckoPrice: !isProduction,
+  SumrCoingeckoTokenID: isProduction ? "summer-2" : "stp-network", // checking if everything works fine with other token on dev
 });
