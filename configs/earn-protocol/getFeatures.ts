@@ -14,4 +14,5 @@ export const getFeatures = ({ isProduction }: ConfigHelperType) => ({
   StakingV2: true,
   UseSumrCoingeckoPrice: true,
   SumrCoingeckoTokenID: "summer-2",
+  DaoManagedVaults: !isProduction,
 });
