@@ -7,15 +7,15 @@ export const getParameters = ({
   topBanner: {
     enabled: true,
     closeable: false,
-    name: "transitioning",
+    name: "transitioned",
     url: "https://blog.summer.fi/summer-fi-goes-all-in-on-lazy-summer-protocol-as-summer-pro-transitions-to-defi-saver/",
     message:
-      "Summer.fi Pro is transitioning to DeFi Saver on February 12, 2026. After this date, all position management will occur through the DeFi Saver app. Read more.",
+      "Summer.fi Pro has now transisitioned to DeFi Saver. All position management will occur through the DeFi Saver app now. Read more.",
   },
   announcement: {
     enabled: true,
     message:
-      "Summer.fi Pro is transitioning to DeFi Saver on February 12, 2026. After this date, all position management will occur through the DeFi Saver app.",
+      "Summer.fi Pro is transitioning to DeFi Saver on February 12, 2026. After this date, all position management will occur through the DeFi Saver app now.",
     url: "https://blog.summer.fi/summer-fi-goes-all-in-on-lazy-summer-protocol-as-summer-pro-transitions-to-defi-saver/",
     actionLabel: "Read more",
     btnBackground: "linear-gradient(90deg, #FF49A4 0%, #B049FF 93%)",
@@ -44,8 +44,8 @@ export const getParameters = ({
       strategyTypes: ["short"],
     },
     adjustDisabledFor: {
-      collateral: [],
-      strategyTypes: [],
+      collateral: [] as const,
+      strategyTypes: [] as const,
     },
     flashLoanTokens: {
       OPTIMISMMAINNET: "WETH",
