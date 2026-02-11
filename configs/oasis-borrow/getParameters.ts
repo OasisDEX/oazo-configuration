@@ -15,7 +15,7 @@ export const getParameters = ({
   announcement: {
     enabled: true,
     message:
-      "Summer.fi is still the home of automated access to DeFi's highest quality yields through Lazy Summer Protocol",
+      "Summer.fi is still the home of automated access to DeFi's highest quality yields through the Lazy Summer Protocol",
     url: "https://summer.fi/",
     actionLabel: "Visit summer.fi",
     btnBackground: "linear-gradient(90deg, #FF49A4 0%, #B049FF 93%)",
