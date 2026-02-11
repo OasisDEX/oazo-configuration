@@ -15,9 +15,9 @@ export const getParameters = ({
   announcement: {
     enabled: true,
     message:
-      "Summer.fi Pro has now transisitioned to DeFi Saver. All position management will occur through the DeFi Saver app now.",
-    url: "https://blog.summer.fi/summer-fi-goes-all-in-on-lazy-summer-protocol-as-summer-pro-transitions-to-defi-saver/",
-    actionLabel: "Read more",
+      "Summer.fi is still the home of automated access to DeFi's highest quality yields through Lazy Summer Protocol",
+    url: "https://summer.fi/",
+    actionLabel: "Visit summer.fi",
     btnBackground: "linear-gradient(90deg, #FF49A4 0%, #B049FF 93%)",
     btnColor: "white",
     icon: "lazy_summer_small_logo",
