@@ -35,6 +35,8 @@ const emptyConfig: FleetConfig = {
     bestFor: "",
     risk: "lower",
     disabled: false,
+    curatedBy: "",
+    minimumDeposit: 0,
     bonus: {
       multiplier: 0,
       label: "",
