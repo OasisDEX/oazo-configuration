@@ -88,12 +88,14 @@ export const getFleetConfig: GetFleetConfig = ({
       risk: "lower",
       curatedBy: "The thing",
       bestFor: "Institutions, HNWs and Funds",
+      minimumDeposit: 100_000,
     }),
     ...vaultConfig({
       address: "0xd40ac82b840af6fbb5b3be41ec820b5ff1199df1", // USDC testing
       risk: "lower",
       curatedBy: "The thing",
       bestFor: "Institutions, HNWs and Funds",
+      minimumDeposit: 100_000,
     }),
   },
   [NetworkIds.SONIC]: {
