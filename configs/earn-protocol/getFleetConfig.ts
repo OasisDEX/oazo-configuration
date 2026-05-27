@@ -15,6 +15,9 @@ type FleetConfig = {
       icon: string;
       description: string;
     };
+    // RWA specific
+    minimumDeposit?: number;
+    curatedBy?: string;
   };
 };
 
@@ -42,7 +45,7 @@ const emptyConfig: FleetConfig = {
 };
 
 const vaultConfig: (props: FleetConfig[`0x${string}`]) => FleetConfig = (
-  props
+  props,
 ) => ({
   [props.address.toLowerCase()]: {
     ...props,
@@ -78,6 +81,18 @@ export const getFleetConfig: GetFleetConfig = ({
   },
   [NetworkIds.BASEMAINNET]: {
     ...emptyConfig,
+    ...vaultConfig({
+      address: "0xb5a07af4302fa0d2bbb389b4481055ed3f576b73", // USDC testing
+      risk: "lower",
+      curatedBy: "The thing",
+      bestFor: "Institutions, HNWs and Funds",
+    }),
+    ...vaultConfig({
+      address: "0xd40ac82b840af6fbb5b3be41ec820b5ff1199df1", // USDC testing
+      risk: "lower",
+      curatedBy: "The thing",
+      bestFor: "Institutions, HNWs and Funds",
+    }),
   },
   [NetworkIds.SONIC]: {
     ...emptyConfig,
