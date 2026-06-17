@@ -86,7 +86,7 @@ export const getFleetConfig: GetFleetConfig = ({
   [NetworkIds.BASEMAINNET]: {
     ...emptyConfig,
     ...vaultConfig({
-      address: "0xb5a07af4302fa0d2bbb389b4481055ed3f576b73", // USDC testing
+      address: "0xb5a07af4302fa0d2bbb389b4481055ed3f576b73", // USDC testing avantgarde
       risk: "lower",
       vaultCuratorId: "avantgarde",
       vaultCurator: "Avantgarde Asset Management",
@@ -95,12 +95,21 @@ export const getFleetConfig: GetFleetConfig = ({
       bestFor: "Institutions, HNWs and Funds",
     }),
     ...vaultConfig({
-      address: "0xd40ac82b840af6fbb5b3be41ec820b5ff1199df1", // USDC testing
+      address: "0xd40ac82b840af6fbb5b3be41ec820b5ff1199df1", // USDC testing avantgarde
       risk: "lower",
       vaultCuratorId: "avantgarde",
       vaultCurator: "Avantgarde Asset Management",
       vaultCuratorDescription:
         "This Vault is curated and managed by Avantgarde Asset Managment.",
+      bestFor: "Institutions, HNWs and Funds",
+    }),
+    ...vaultConfig({
+      address: "0x44e39D3EB84fa25c2031252Fc229F2a74A3800D4", // USDC testing standard engine
+      risk: "lower",
+      vaultCuratorId: "standard-engine",
+      vaultCurator: "Standard Engine",
+      vaultCuratorDescription:
+        "This Vault is curated and managed by Standard Engine.",
       bestFor: "Institutions, HNWs and Funds",
     }),
   },
