@@ -16,8 +16,9 @@ type FleetConfig = {
       description: string;
     };
     // RWA specific
-    minimumDeposit?: number;
-    curatedBy?: string;
+    vaultCuratorId?: string;
+    vaultCurator?: string;
+    vaultCuratorDescription?: string;
   };
 };
 
@@ -35,8 +36,9 @@ const emptyConfig: FleetConfig = {
     bestFor: "",
     risk: "lower",
     disabled: false,
-    curatedBy: "",
-    minimumDeposit: 0,
+    vaultCuratorId: "",
+    vaultCurator: "",
+    vaultCuratorDescription: "",
     bonus: {
       multiplier: 0,
       label: "",
@@ -86,16 +88,20 @@ export const getFleetConfig: GetFleetConfig = ({
     ...vaultConfig({
       address: "0xb5a07af4302fa0d2bbb389b4481055ed3f576b73", // USDC testing
       risk: "lower",
-      curatedBy: "The thing",
+      vaultCuratorId: "avantgarde",
+      vaultCurator: "Avantgarde Asset Management",
+      vaultCuratorDescription:
+        "This Vault is curated and managed by Avantgarde Asset Managment.",
       bestFor: "Institutions, HNWs and Funds",
-      minimumDeposit: 100_000,
     }),
     ...vaultConfig({
       address: "0xd40ac82b840af6fbb5b3be41ec820b5ff1199df1", // USDC testing
       risk: "lower",
-      curatedBy: "The thing",
+      vaultCuratorId: "avantgarde",
+      vaultCurator: "Avantgarde Asset Management",
+      vaultCuratorDescription:
+        "This Vault is curated and managed by Avantgarde Asset Managment.",
       bestFor: "Institutions, HNWs and Funds",
-      minimumDeposit: 100_000,
     }),
   },
   [NetworkIds.SONIC]: {
