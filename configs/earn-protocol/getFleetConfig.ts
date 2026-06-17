@@ -19,6 +19,7 @@ type FleetConfig = {
     vaultCuratorId?: string;
     vaultCurator?: string;
     vaultCuratorDescription?: string;
+    navPriceSkipFirstNDays?: number;
   };
 };
 
@@ -39,6 +40,7 @@ const emptyConfig: FleetConfig = {
     vaultCuratorId: "",
     vaultCurator: "",
     vaultCuratorDescription: "",
+    navPriceSkipFirstNDays: 0,
     bonus: {
       multiplier: 0,
       label: "",
@@ -93,6 +95,7 @@ export const getFleetConfig: GetFleetConfig = ({
       vaultCuratorDescription:
         "This Vault is curated and managed by Avantgarde Asset Managment.",
       bestFor: "Institutions, HNWs and Funds",
+      navPriceSkipFirstNDays: 5, // need to skip first 5 days so the NAV price calculations (and 30d Nav price apy change) isnt skewed
     }),
     ...vaultConfig({
       address: "0xd40ac82b840af6fbb5b3be41ec820b5ff1199df1", // USDC testing avantgarde
