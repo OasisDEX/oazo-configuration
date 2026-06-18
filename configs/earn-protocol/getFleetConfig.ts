@@ -61,12 +61,10 @@ const vaultConfig: (props: FleetConfig[`0x${string}`]) => FleetConfig = (
   },
 });
 
-export const getFleetConfig: GetFleetConfig = ({
-  isProduction: _isProduction,
-}) => ({
-  // FLEET ADDRESS SHOULD BE ALL LOWERCASE ('vaultConfig' takes care of it)
+const regularFleetConfigs: {
+  [networkId in NetworkIds]: FleetConfig;
+} = {
   [NetworkIds.MAINNET]: {
-    ...emptyConfig,
     ...vaultConfig({
       address: "0x2e6abcbcced9af05bc3b8a4908e0c98c29a88e10", // ETH
       risk: "higher",
@@ -78,49 +76,15 @@ export const getFleetConfig: GetFleetConfig = ({
       bestFor: "More aggressive strategies",
     }),
   },
-  [NetworkIds.OPTIMISMMAINNET]: {
-    ...emptyConfig,
-  },
+  [NetworkIds.OPTIMISMMAINNET]: {},
   [NetworkIds.ARBITRUMMAINNET]: {
     ...vaultConfig({
       address: "0x4f63cfea7458221cb3a0eee2f31f7424ad34bb58",
       disabled: true,
     }),
   },
-  [NetworkIds.BASEMAINNET]: {
-    ...emptyConfig,
-    ...vaultConfig({
-      address: "0xb5a07af4302fa0d2bbb389b4481055ed3f576b73", // USDC testing avantgarde
-      risk: "lower",
-      vaultInstitutionId: "ExtDemoCorp_v2",
-      vaultCuratorId: "avantgarde",
-      vaultCurator: "Avantgarde",
-      vaultCuratorDescription:
-        "This Vault is curated and managed by Avantgarde Asset Managment.",
-      bestFor: "Institutions, HNWs and Funds",
-      navPriceSkipFirstNDays: 5, // need to skip first 5 days so the NAV price calculations (and 30d Nav price apy change) isnt skewed
-    }),
-    ...vaultConfig({
-      address: "0xd40ac82b840af6fbb5b3be41ec820b5ff1199df1", // USDC testing avantgarde (hidden one, unused)
-      disabled: true,
-    }),
-    ...vaultConfig({
-      address: "0xea342341Dc8dD1bca787Fac812dF9080A273d724", // USDC testing standard engine
-      risk: "lower",
-      vaultInstitutionId: "ExtDemoCorp_3",
-      vaultCuratorId: "standard-engine",
-      vaultCurator: "StdEng",
-      vaultCuratorDescription:
-        "This Vault is curated and managed by Standard Engine.",
-      bestFor: "Institutions, HNWs and Funds",
-    }),
-    ...vaultConfig({
-      address: "0x44e39d3eb84fa25c2031252fc229f2a74a3800d4", // USDC testing standard engine  (hidden one, unused)
-      disabled: true,
-    }),
-  },
+  [NetworkIds.BASEMAINNET]: {},
   [NetworkIds.SONIC]: {
-    ...emptyConfig,
     ...vaultConfig({
       address: "0x507a2d9e87dbd3076e65992049c41270b47964f8", // USDC
       bonus: {
@@ -132,7 +96,6 @@ export const getFleetConfig: GetFleetConfig = ({
     }),
   },
   [NetworkIds.HYPERLIQUID]: {
-    ...emptyConfig,
     ...vaultConfig({
       address: "0x2cc190fb654141dfbeac4c0f718f4d511674d346", // USDT0
       bonus: {
@@ -151,5 +114,96 @@ export const getFleetConfig: GetFleetConfig = ({
         label: "Earn points across protocols",
       },
     }),
+  },
+};
+
+const rwaFleetConfigs: {
+  [networkId in NetworkIds]: FleetConfig;
+} = {
+  [NetworkIds.MAINNET]: {
+    ...vaultConfig({
+      address: "0x35aE5392cc355686606658d18dff9b9109390E13", // USDC testing orthodox
+      risk: "lower",
+      name: "Orthodox",
+      vaultInstitutionId: "Orthodox",
+      vaultCuratorId: "avantgarde",
+      vaultCurator: "Avantgarde",
+      vaultCuratorDescription:
+        "This Vault is curated and managed by Avantgarde Asset Managment.",
+      bestFor: "Institutions, HNWs and Funds",
+    }),
+  },
+  [NetworkIds.OPTIMISMMAINNET]: {},
+  [NetworkIds.ARBITRUMMAINNET]: {},
+  [NetworkIds.BASEMAINNET]: {
+    ...vaultConfig({
+      address: "0xb5a07af4302fa0d2bbb389b4481055ed3f576b73", // USDC testing avantgarde
+      risk: "lower",
+      name: "Avantgarde USDC",
+      vaultInstitutionId: "ExtDemoCorp_v2",
+      vaultCuratorId: "avantgarde",
+      vaultCurator: "Avantgarde",
+      vaultCuratorDescription:
+        "This Vault is curated and managed by Avantgarde Asset Managment.",
+      bestFor: "Institutions, HNWs and Funds",
+      navPriceSkipFirstNDays: 5, // need to skip first 5 days so the NAV price calculations (and 30d Nav price apy change) isnt skewed
+    }),
+    ...vaultConfig({
+      address: "0xd40ac82b840af6fbb5b3be41ec820b5ff1199df1", // USDC testing avantgarde (hidden one, unused)
+      disabled: true,
+    }),
+    ...vaultConfig({
+      address: "0xea342341Dc8dD1bca787Fac812dF9080A273d724", // USDC testing standard engine
+      risk: "lower",
+      name: "StdEng USDC",
+      vaultInstitutionId: "ExtDemoCorp_3",
+      vaultCuratorId: "standard-engine",
+      vaultCurator: "StdEng",
+      vaultCuratorDescription:
+        "This Vault is curated and managed by Standard Engine.",
+      bestFor: "Institutions, HNWs and Funds",
+    }),
+    ...vaultConfig({
+      address: "0x44e39d3eb84fa25c2031252fc229f2a74a3800d4", // USDC testing standard engine  (hidden one, unused)
+      disabled: true,
+    }),
+  },
+  [NetworkIds.SONIC]: {},
+  [NetworkIds.HYPERLIQUID]: {},
+};
+
+export const getFleetConfig: GetFleetConfig = ({
+  isProduction: _isProduction,
+}) => ({
+  // FLEET ADDRESS SHOULD BE ALL LOWERCASE ('vaultConfig' takes care of it)
+  [NetworkIds.MAINNET]: {
+    ...emptyConfig,
+    ...regularFleetConfigs[NetworkIds.MAINNET],
+    ...rwaFleetConfigs[NetworkIds.MAINNET],
+  },
+  [NetworkIds.OPTIMISMMAINNET]: {
+    ...emptyConfig,
+    ...regularFleetConfigs[NetworkIds.OPTIMISMMAINNET],
+    ...rwaFleetConfigs[NetworkIds.OPTIMISMMAINNET],
+  },
+  [NetworkIds.ARBITRUMMAINNET]: {
+    ...emptyConfig,
+    ...regularFleetConfigs[NetworkIds.ARBITRUMMAINNET],
+    ...rwaFleetConfigs[NetworkIds.ARBITRUMMAINNET],
+  },
+  [NetworkIds.BASEMAINNET]: {
+    ...emptyConfig,
+    ...regularFleetConfigs[NetworkIds.BASEMAINNET],
+    ...rwaFleetConfigs[NetworkIds.BASEMAINNET],
+  },
+  [NetworkIds.SONIC]: {
+    ...emptyConfig,
+    ...regularFleetConfigs[NetworkIds.SONIC],
+    ...rwaFleetConfigs[NetworkIds.SONIC],
+  },
+  [NetworkIds.HYPERLIQUID]: {
+    ...emptyConfig,
+    ...regularFleetConfigs[NetworkIds.HYPERLIQUID],
+    ...rwaFleetConfigs[NetworkIds.HYPERLIQUID],
   },
 });
