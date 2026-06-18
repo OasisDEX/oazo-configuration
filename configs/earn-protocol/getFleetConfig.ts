@@ -124,7 +124,7 @@ const rwaFleetConfigs: {
     ...vaultConfig({
       address: "0x35aE5392cc355686606658d18dff9b9109390E13", // USDC testing orthodox
       risk: "lower",
-      name: "Orthodox",
+      name: "Avantgarde Orthodox USDC",
       vaultInstitutionId: "Orthodox",
       vaultCuratorId: "avantgarde",
       vaultCurator: "Avantgarde",
