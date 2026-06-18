@@ -16,6 +16,7 @@ type FleetConfig = {
       description: string;
     };
     // RWA specific
+    vaultInstitutionId?: string;
     vaultCuratorId?: string;
     vaultCurator?: string;
     vaultCuratorDescription?: string;
@@ -37,6 +38,7 @@ const emptyConfig: FleetConfig = {
     bestFor: "",
     risk: "lower",
     disabled: false,
+    vaultInstitutionId: "",
     vaultCuratorId: "",
     vaultCurator: "",
     vaultCuratorDescription: "",
@@ -90,30 +92,31 @@ export const getFleetConfig: GetFleetConfig = ({
     ...vaultConfig({
       address: "0xb5a07af4302fa0d2bbb389b4481055ed3f576b73", // USDC testing avantgarde
       risk: "lower",
+      vaultInstitutionId: "ExtDemoCorp_v2",
       vaultCuratorId: "avantgarde",
-      vaultCurator: "Avantgarde Asset Management",
+      vaultCurator: "Avantgarde",
       vaultCuratorDescription:
         "This Vault is curated and managed by Avantgarde Asset Managment.",
       bestFor: "Institutions, HNWs and Funds",
       navPriceSkipFirstNDays: 5, // need to skip first 5 days so the NAV price calculations (and 30d Nav price apy change) isnt skewed
     }),
     ...vaultConfig({
-      address: "0xd40ac82b840af6fbb5b3be41ec820b5ff1199df1", // USDC testing avantgarde
-      risk: "lower",
-      vaultCuratorId: "avantgarde",
-      vaultCurator: "Avantgarde Asset Management",
-      vaultCuratorDescription:
-        "This Vault is curated and managed by Avantgarde Asset Managment.",
-      bestFor: "Institutions, HNWs and Funds",
+      address: "0xd40ac82b840af6fbb5b3be41ec820b5ff1199df1", // USDC testing avantgarde (hidden one, unused)
+      disabled: true,
     }),
     ...vaultConfig({
-      address: "0x44e39D3EB84fa25c2031252Fc229F2a74A3800D4", // USDC testing standard engine
+      address: "0xea342341Dc8dD1bca787Fac812dF9080A273d724", // USDC testing standard engine
       risk: "lower",
+      vaultInstitutionId: "ExtDemoCorp_3",
       vaultCuratorId: "standard-engine",
-      vaultCurator: "Standard Engine",
+      vaultCurator: "StdEng",
       vaultCuratorDescription:
         "This Vault is curated and managed by Standard Engine.",
       bestFor: "Institutions, HNWs and Funds",
+    }),
+    ...vaultConfig({
+      address: "0x44e39d3eb84fa25c2031252fc229f2a74a3800d4", // USDC testing standard engine  (hidden one, unused)
+      disabled: true,
     }),
   },
   [NetworkIds.SONIC]: {
