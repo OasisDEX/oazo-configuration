@@ -78,10 +78,7 @@ const regularFleetConfigs: {
   },
   [NetworkIds.OPTIMISMMAINNET]: {},
   [NetworkIds.ARBITRUMMAINNET]: {
-    ...vaultConfig({
-      address: "0x4f63cfea7458221cb3a0eee2f31f7424ad34bb58",
-      disabled: true,
-    }),
+    ...emptyConfig,
   },
   [NetworkIds.BASEMAINNET]: {},
   [NetworkIds.SONIC]: {
