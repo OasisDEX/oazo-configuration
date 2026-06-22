@@ -20,6 +20,7 @@ type FleetConfig = {
     vaultCuratorId?: string;
     vaultCurator?: string;
     vaultCuratorDescription?: string;
+    marketTargetAllocationPercentage?: number;
     navPriceSkipFirstNDays?: number;
   };
 };
@@ -42,6 +43,7 @@ const emptyConfig: FleetConfig = {
     vaultCuratorId: "",
     vaultCurator: "",
     vaultCuratorDescription: "",
+    marketTargetAllocationPercentage: 0,
     navPriceSkipFirstNDays: 0,
     bonus: {
       multiplier: 0,
@@ -130,6 +132,7 @@ const rwaFleetConfigs: {
       vaultCurator: "Avantgarde",
       vaultCuratorDescription:
         "This Vault is curated and managed by Avantgarde Asset Managment.",
+      marketTargetAllocationPercentage: 0.05, // 5%
       bestFor: "Institutions, HNWs and Funds",
     }),
   },
@@ -145,6 +148,7 @@ const rwaFleetConfigs: {
       vaultCurator: "Avantgarde",
       vaultCuratorDescription:
         "This Vault is curated and managed by Avantgarde Asset Managment.",
+      marketTargetAllocationPercentage: 0.05, // 5%
       bestFor: "Institutions, HNWs and Funds",
       navPriceSkipFirstNDays: 5, // need to skip first 5 days so the NAV price calculations (and 30d Nav price apy change) isnt skewed
     }),
@@ -161,6 +165,7 @@ const rwaFleetConfigs: {
       vaultCurator: "StdEng",
       vaultCuratorDescription:
         "This Vault is curated and managed by Standard Engine.",
+      marketTargetAllocationPercentage: 0.05, // 5%
       bestFor: "Institutions, HNWs and Funds",
     }),
     ...vaultConfig({
