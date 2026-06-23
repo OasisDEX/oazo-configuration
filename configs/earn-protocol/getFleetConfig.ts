@@ -159,7 +159,7 @@ const rwaFleetConfigs: {
         "This Vault is curated and managed by Avantgarde Asset Managment.",
       vaultFactSheetUrl: "#",
       vaultHeaderDescription: "Avantgarde Vault additional description",
-      vaultMarketLogos: ["vaneek"],
+      vaultMarketLogos: ["vaneck"],
       marketTargetAllocationPercentage: 0.05, // 5%
       bestFor: "Institutions, HNWs and Funds",
       navPriceSkipFirstNDays: 5, // need to skip first 5 days so the NAV price calculations (and 30d Nav price apy change) isnt skewed
