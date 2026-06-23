@@ -20,6 +20,9 @@ type FleetConfig = {
     vaultCuratorId?: string;
     vaultCurator?: string;
     vaultCuratorDescription?: string;
+    vaultHeaderDescription?: string;
+    vaultMarketLogos?: string[];
+    vaultFactSheetUrl?: string;
     marketTargetAllocationPercentage?: number;
     navPriceSkipFirstNDays?: number;
   };
@@ -43,6 +46,9 @@ const emptyConfig: FleetConfig = {
     vaultCuratorId: "",
     vaultCurator: "",
     vaultCuratorDescription: "",
+    vaultHeaderDescription: "",
+    vaultFactSheetUrl: "",
+    vaultMarketLogos: [""],
     marketTargetAllocationPercentage: 0,
     navPriceSkipFirstNDays: 0,
     bonus: {
@@ -132,6 +138,9 @@ const rwaFleetConfigs: {
       vaultCurator: "Avantgarde",
       vaultCuratorDescription:
         "This Vault is curated and managed by Avantgarde Asset Managment.",
+      vaultFactSheetUrl: "#",
+      vaultHeaderDescription: "Orthodox Vault additional description",
+      vaultMarketLogos: ["stac", "apollo"],
       marketTargetAllocationPercentage: 0.05, // 5%
       bestFor: "Institutions, HNWs and Funds",
     }),
@@ -148,6 +157,9 @@ const rwaFleetConfigs: {
       vaultCurator: "Avantgarde",
       vaultCuratorDescription:
         "This Vault is curated and managed by Avantgarde Asset Managment.",
+      vaultFactSheetUrl: "#",
+      vaultHeaderDescription: "Avantgarde Vault additional description",
+      vaultMarketLogos: ["vaneek"],
       marketTargetAllocationPercentage: 0.05, // 5%
       bestFor: "Institutions, HNWs and Funds",
       navPriceSkipFirstNDays: 5, // need to skip first 5 days so the NAV price calculations (and 30d Nav price apy change) isnt skewed
@@ -165,6 +177,9 @@ const rwaFleetConfigs: {
       vaultCurator: "StdEng",
       vaultCuratorDescription:
         "This Vault is curated and managed by Standard Engine.",
+      vaultFactSheetUrl: "#",
+      vaultHeaderDescription: "Standard Engine Vault additional description",
+      vaultMarketLogos: ["superstate", "apollo"],
       marketTargetAllocationPercentage: 0.05, // 5%
       bestFor: "Institutions, HNWs and Funds",
     }),
