@@ -4,6 +4,7 @@ export const getFeatures = ({ isProduction }: ConfigHelperType) => ({
   Migrations: true,
   Send: true,
   FilterZeroTokenVaults: isProduction, // filter out zero token vaults on production
+  ShowAllVaults: !isProduction, // show all vaults - but not on prod
   VaultSwitching: true,
   BeachClub: true,
   Institutions: true,
