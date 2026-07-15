@@ -10,8 +10,10 @@ export default function (params: ConfigHelperType) {
     fleetMap: getFleetConfig(params),
     features: getFeatures(params),
     maintenance: false,
-    bannerMessage: "",
-    bannerMessageUrl: "",
+    bannerMessage:
+      "Summer.fi is sunsetting at the end of August. Read the full announcement here:",
+    bannerMessageUrl:
+      "https://blog.summer.fi/sunsetting-summer-fi-and-the-labs-company/",
     deployment: params,
     tosWhitelist: getTosWhitelist(),
   };
