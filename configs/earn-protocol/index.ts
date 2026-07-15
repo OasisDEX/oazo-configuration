@@ -11,6 +11,7 @@ export default function (params: ConfigHelperType) {
     features: getFeatures(params),
     maintenance: false,
     bannerMessage: "",
+    bannerMessageUrl: "",
     deployment: params,
     tosWhitelist: getTosWhitelist(),
   };
