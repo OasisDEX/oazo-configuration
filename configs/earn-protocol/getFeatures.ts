@@ -18,4 +18,5 @@ export const getFeatures = ({ isProduction }: ConfigHelperType) => ({
   DaoManagedVaults: true,
   DcaEnabled: !isProduction,
   RwaEnabled: !isProduction,
+  EthereumUSDCMerkleBanner: !isProduction,
 });
